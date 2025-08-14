@@ -301,6 +301,7 @@ uvicorn main:app --reload
 
 
 # Run frontend
+```bash
 # Navigate to client directory  
 cd client  
   
@@ -309,3 +310,9 @@ npm install
   
 # Start development server  
 npm run dev
+```
+
+# Live Deployments
+
+Server: Render (needs to spin up for the start)
+Frontend: Render (link in repo) 
