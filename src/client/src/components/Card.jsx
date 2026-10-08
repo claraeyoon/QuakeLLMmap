@@ -6,16 +6,18 @@ export default function Card({ fileName }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    
     let isMounted = true;
-    let intervalId;
+    let timerId = null;
+    let attempts = 0;
+    const maxAttempts = 30; // 30 * 5s = 150s max
 
     const fetchAnalysis = async () => {
       try {
-        setLoading(true);
         setError(null);
+        attempts += 1;
         
-        const res = await fetch(`https://quakemap.onrender.com/result/${fileName}`);
+        const apiBase = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+        const res = await fetch(`${apiBase}/result/${fileName}`);
         
         if (!isMounted) return;
 
@@ -24,15 +26,10 @@ export default function Card({ fileName }) {
           if (data && Object.keys(data).length > 0) {
             setAnalysis(data);
             setLoading(false);
-            if (intervalId) clearInterval(intervalId);
-          } else {
-            // Still processing, continue polling
-            setLoading(true);
+            return; // Successfully loaded: stop polling completely
           }
         } else if (res.status === 404 || res.status === 202) {
-          
-        // 404: Not found yet (still processing)
-        // 202: Accepted but not ready
+          // Still processing, continue waiting
           setLoading(true);
         } else {
           throw new Error(`Server error: ${res.status}`);
@@ -42,25 +39,32 @@ export default function Card({ fileName }) {
         console.error('Fetch error:', err);
         setError(`Failed to fetch analysis: ${err.message}`);
         setLoading(false);
-        if (intervalId) clearInterval(intervalId);
+        return; // Stop polling on error
+      }
+
+      if (attempts >= maxAttempts) {
+        if (!isMounted) return;
+        setError("Processing timed out. Please check server logs or refresh to retry.");
+        setLoading(false);
+        return;
+      }
+
+      // Schedule next poll in 5 seconds while processing
+      if (isMounted) {
+        timerId = setTimeout(fetchAnalysis, 5000);
       }
     };
 
-    // Start polling
+    // Initial trigger
     setLoading(true);
+    setAnalysis(null);
     fetchAnalysis();
-    
-    intervalId = setInterval(() => {
-      if (!analysis && !error && isMounted) {
-        fetchAnalysis();
-      }
-    }, 3000); // Poll every 3 seconds
 
     return () => {
       isMounted = false;
-      if (intervalId) clearInterval(intervalId);
+      if (timerId) clearTimeout(timerId);
     };
-  }, [fileName, analysis, error]);
+  }, [fileName]);
 
 
   return (

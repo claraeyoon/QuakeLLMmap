@@ -17,27 +17,19 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langgraph.graph import START, END, StateGraph
 
-from pprint import pprint
+from services.utilities import load_credentials
 
 load_dotenv()
 
-path = os.environ['filepath']
-projectID = os.environ['projectID']
-TRAVILY_API_KEY = os.environ['TAVILY_API_KEY']
+projectID = os.environ.get('projectID') or os.environ.get('GCS_PROJECT_ID')
+TRAVILY_API_KEY = os.environ.get('TAVILY_API_KEY')
 
-creds_b64 = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS_JSON")
-
-if not creds_b64:
-    raise RuntimeError("Missing GOOGLE_APPLICATION_CREDENTIALS_JSON environment variable")
-
-creds_info = json.loads(base64.b64decode(creds_b64).decode("utf-8"))
-
-# Load credentials
-credentials = Credentials.from_service_account_info(
-    creds_info, scopes=["https://www.googleapis.com/auth/cloud-platform"]
-)
-
-vertexai.init(project=projectID, location='us-central1', credentials=credentials)
+try:
+    credentials = load_credentials()
+    if projectID:
+        vertexai.init(project=projectID, location=os.environ.get('GCS_REGION', 'us-central1'), credentials=credentials)
+except Exception as e:
+    print(f"Notice: vertexai init deferred: {e}")
 
 class State(TypedDict):
     """
@@ -106,7 +98,11 @@ SEISMIC_ANALYSIS_SCHEMA = {
 class MultimodalEarthquakeCRAG:
     def __init__(self):
         self.mmi_retriever = MMIRetriever()
-        self.web_search_tool = TavilySearchResults(k=3,tavily_api_key=TRAVILY_API_KEY)
+        tavily_key = os.environ.get('TAVILY_API_KEY')
+        if tavily_key:
+            self.web_search_tool = TavilySearchResults(k=3, tavily_api_key=tavily_key)
+        else:
+            self.web_search_tool = None
         self.setup_graph()
 
     def setup_graph(self):
@@ -136,15 +132,26 @@ class MultimodalEarthquakeCRAG:
         self.app = workflow.compile()
 
     
-    def analyze_media_and_traverse_states(self, blob_name : str, signed_url : str, mime_type : str):
-        if ".pdf" in signed_url.lower():
-            mime_type = "application/pdf"
-        elif ".mp4" in signed_url.lower():
+    def analyze_media_and_traverse_states(self, blob_name : str, signed_url : str, mime_type : str = None):
+        url_lower = signed_url.lower()
+        if mime_type and mime_type in {"image/jpeg", "image/png", "image/webp", "video/mp4", "application/pdf"}:
+            pass
+        elif any(ext in url_lower for ext in [".jpg", ".jpeg"]):
+            mime_type = "image/jpeg"
+        elif ".png" in url_lower:
+            mime_type = "image/png"
+        elif ".webp" in url_lower:
+            mime_type = "image/webp"
+        elif ".mp4" in url_lower:
             mime_type = "video/mp4"
+        elif ".pdf" in url_lower:
+            mime_type = "application/pdf"
+        elif mime_type:
+            pass
         else:
-            raise ValueError("Unable to determine mime type from URL")
+            mime_type = "image/jpeg"
         
-        # inital state
+        # initial state
         inputs = {
             "blob_name": blob_name,
             "signed_url": signed_url,
@@ -154,10 +161,10 @@ class MultimodalEarthquakeCRAG:
         for output in self.app.stream(inputs):
             for key, value in output.items():
                 # Node
-                pprint(f"Node '{key}':")
+                print(f"Node '{key}':")
                 # Optional: print full state at each node
-                pprint(value, indent=2, width=80, depth=None)
-            pprint("\n---\n")
+                print(value)
+            print("\n---\n")
        
         return value
     
@@ -201,6 +208,44 @@ class MultimodalEarthquakeCRAG:
             print("---DECISION: SUFFICIENT DOCUMENTS, PROCEED TO ANALYSIS---")
             return "final_analysis"
     
+    def get_media_part(self, blob_name: str, signed_url: str, mime_type: str) -> Part:
+        """
+        Builds a Part object for Vertex AI Gemini.
+        Vertex AI requires 'gs://bucket/blob' format or raw bytes via Part.from_data.
+        HTTPS signed URLs are NOT supported by Part.from_uri.
+        """
+        bucket = os.environ.get("GCS_BUCKET", "quakemap-media-data")
+
+        # Method 1: Direct bytes via GCS storage client (most reliable)
+        try:
+            from services.utilities import lazy_clients
+            storage_client, _ = lazy_clients()
+            blob = storage_client.bucket(bucket).blob(blob_name)
+            data = blob.download_as_bytes()
+            print(f"✅ Loaded {len(data)} bytes directly from GCS blob '{blob_name}'")
+            return Part.from_data(data=data, mime_type=mime_type)
+        except Exception as e:
+            print(f"Notice: Direct GCS download notice: {e}")
+
+        # Method 2: Download bytes via HTTP signed URL
+        if signed_url and signed_url.startswith("http"):
+            try:
+                import requests
+                resp = requests.get(signed_url, timeout=30)
+                if resp.ok and resp.content:
+                    print(f"✅ Downloaded {len(resp.content)} bytes via signed URL")
+                    return Part.from_data(data=resp.content, mime_type=mime_type)
+            except Exception as e:
+                print(f"Notice: HTTP signed_url download notice: {e}")
+
+        # Method 3: Native gs:// URI
+        if bucket and blob_name:
+            gcs_uri = f"gs://{bucket}/{blob_name}"
+            print(f"Trying native GCS URI: {gcs_uri}")
+            return Part.from_uri(gcs_uri, mime_type=mime_type)
+
+        raise RuntimeError(f"Could not load media part for blob: {blob_name}")
+
     def initial_analysis(self, state):
         blob_name = state["blob_name"]
         signed_url = state["signed_url"]
@@ -223,11 +268,12 @@ class MultimodalEarthquakeCRAG:
                 - If audio is present, analyze for screams, panic, structural sounds (crashing, creaking), or silence after impact.
         """
         
+        media_part = self.get_media_part(blob_name, signed_url, mime_type)
         contents = [
             Part.from_text(Description_Prompt),
-            Part.from_uri(signed_url, mime_type=mime_type)
+            media_part
         ]
-        analysis = get_response(contents)
+        analysis = get_response(contents, json_mode=False)
 
         return {
             "blob_name": blob_name,
@@ -254,11 +300,19 @@ class MultimodalEarthquakeCRAG:
         print("---GRADE RETRIEVED DOCUMENTS---")
 
         context = state["context_summary"]
-        documents = state["mmi_documents"]
+        documents = state.get("mmi_documents", [])
         filtered_docs = []
         web_search = "No"
 
-        for doc in documents:
+        if not documents:
+            return {
+                **state,
+                "mmi_documents": [],
+                "web_search": "Yes"
+            }
+
+        import time
+        for i, doc in enumerate(documents, 1):
             grader_prompt = f"""
                 You are a grader assessing relevance of seismic/earthquake documents to earthquake damage assessment.
                 If the document contains information about earthquake intensity scales (like MMI), building damage patterns,
@@ -267,16 +321,26 @@ class MultimodalEarthquakeCRAG:
             Analysis context: {context}
             """
 
-            contents = [Part.from_text(grader_prompt)]
-            score = self.get_structured_response(contents, GRADE_DOCUMENTS_SCHEMA)
+            try:
+                contents = [Part.from_text(grader_prompt)]
+                score = self.get_structured_response(contents, GRADE_DOCUMENTS_SCHEMA)
 
-            if(score["binary_score"] == "yes"):
-                print("---GRADE: DOCUMENT RELEVANT---")
+                if score.get("binary_score") == "yes":
+                    print(f"---GRADE: DOCUMENT {i} RELEVANT---")
+                    filtered_docs.append(doc)
+                else:
+                    print(f"---GRADE: DOCUMENT {i} NOT RELEVANT---")
+                    web_search = "Yes"
+            except Exception as e:
+                print(f"Notice: Document {i} grading encountered rate limit/error ({e}). Defaulting to RELEVANT.")
                 filtered_docs.append(doc)
-            else:
-                print("---GRADE: DOCUMENT NOT RELEVANT---")
-                web_search = "Yes"
+
+            # Pacing delay between grading calls to avoid Vertex AI burst quota
+            time.sleep(1.0)
         
+        if not filtered_docs:
+            web_search = "Yes"
+
         return {
             **state, 
             "mmi_documents" : filtered_docs,
@@ -287,18 +351,21 @@ class MultimodalEarthquakeCRAG:
         """Search web for additional seismic information."""
         print("---WEB SEARCH FOR SEISMIC INFO---")
         query = state["context_summary"]
-        documents = state["seismic_documents"]
+        documents = list(state.get("mmi_documents", []))
         
         # Perform web search
-        search_results = self.web_search_tool.invoke({"query": f"earthquake intensity scale MMI damage assessment {query}"})
-        web_content = "\n".join([result["content"] for result in search_results])
-        web_doc = Document(page_content=web_content)
-        
-        documents.append(web_doc)
+        if self.web_search_tool:
+            try:
+                search_results = self.web_search_tool.invoke({"query": f"earthquake intensity scale MMI damage assessment {query}"})
+                web_content = "\n".join([result.get("content", "") for result in search_results if isinstance(result, dict)])
+                web_doc = Document(page_content=web_content)
+                documents.append(web_doc)
+            except Exception as e:
+                print(f"Notice: Tavily search error: {e}")
         
         return {
             **state,
-            "seismic_documents": documents
+            "mmi_documents": documents
         }
 
     def transform_query(self, state):
@@ -316,7 +383,7 @@ class MultimodalEarthquakeCRAG:
         """
         
         contents = [Part.from_text(query_prompt)]
-        better_query = get_response(contents)
+        better_query = get_response(contents, json_mode=False)
         
         return {
             **state,
@@ -361,15 +428,15 @@ class MultimodalEarthquakeCRAG:
         generation = f"""
         EARTHQUAKE ASSESSMENT REPORT
         ============================
-        File: {analysis['blob_name']}
-        MMI Estimation: {analysis['mmi_estimation']}
-        Confidence: {analysis['confidence']}
+        File: {analysis.get('blob_name', blob_name)}
+        MMI Estimation: {analysis.get('mmi_estimation', 'N/A')}
+        Confidence: {analysis.get('confidence', 'N/A')}
         
-        Description: {analysis['description']}
-        Location: {analysis['location']}
-        Building Type: {analysis['building_type']}
-        Evidence Analysis: {analysis['evidence_analysis']}
-        Reasoning: {analysis['reasoning']}
+        Description: {analysis.get('description', '')}
+        Location: {analysis.get('location', '')}
+        Building Type: {analysis.get('building_type', '')}
+        Evidence Analysis: {analysis.get('evidence_analysis', '')}
+        Reasoning: {analysis.get('reasoning', '')}
         """
         
         return {

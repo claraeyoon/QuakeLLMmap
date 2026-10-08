@@ -56,90 +56,133 @@ The system relies on multiple Python packages for AI, cloud, and workflow orches
 
 ## 🔧 Environment Configuration
 
+Create a `.env` file inside `server/` (copy from `server/.env.example`):
+
 ```bash
 # Google Cloud Platform
-projectID="client-id"
-PINECONE_API="APIKEY"
-TAVILY_API_KEY="APIKEY"
+GCS_PROJECT_ID="your-gcp-project-id"
+projectID="your-gcp-project-id"
+GCS_REGION="us-central1"
 
-GOOGLE_APPLICATION_CREDENTIALS_JSON=base64encrypted-one-line-stringHERE
+# Service Account Credentials:
+# Option A (Recommended): Direct path to your downloaded JSON key
+GOOGLE_APPLICATION_CREDENTIALS="./service_account.json"
+# Option B: Base64 string of the service account JSON key
+# GOOGLE_APPLICATION_CREDENTIALS_JSON="ewog..."
 
-GCS_PROJECT_ID="client-id"
-GCS_BUCKET="earthquake_bukt"
+# Cloud Storage Bucket Name (globally unique across GCP)
+GCS_BUCKET="your-earthquake-bucket"
 SIGNED_URL_TTL="36000"
+
+# BigQuery Dataset & Table
 BQ_DATASET="earthquake_dataset"
 BQ_TABLE="map_store"
+
+# Pinecone Vector Search
+PINECONE_API="your-pinecone-api-key"
+
+# Tavily Web Search
+TAVILY_API_KEY="your-tavily-api-key"
+
+# Server Port
 PORT=8000
 ```
 
-## 🚀 Development Setup
+## 🚀 Step-by-Step Setup from Scratch
 
-```
-1. Set up Google Cloud Storage Bucket
-    - must strictly follow variable names. 
-    - bucket: earthquake_bukt
-2. Set up Big Query Table
-    - must have exact same name and fields
-    - Dataset name : earthquake_dataset
-    - table name : map_store
-    - Fields (str, nullable): blob_name, mmi_estimation, confidence, map_url, reasoning
+### 1. Google Cloud Platform (GCP)
+1. **Create or select a GCP Project**:
+   - Note your `Project ID` (e.g. `quakemap-123456`). Set this as `GCS_PROJECT_ID` and `projectID` in `.env`.
+2. **Enable Required APIs**:
+   - Cloud Storage API (`storage.googleapis.com`)
+   - BigQuery API (`bigquery.googleapis.com`)
+   - Vertex AI API (`aiplatform.googleapis.com`)
+3. **Create Cloud Storage Bucket**:
+   - Create a bucket (e.g. `quakemap-media-bucket`). Bucket names must be globally unique across GCP.
+   - Set `GCS_BUCKET` in `.env`.
+4. **Create a Service Account & Download Key**:
+   - Go to **IAM & Admin > Service Accounts > Create Service Account**.
+   - Grant the following roles:
+     - `Storage Object Admin`
+     - `BigQuery Data Editor`
+     - `BigQuery Job User`
+     - `Vertex AI User`
+   - Go to the **Keys** tab > **Add Key > Create new key > JSON**.
+   - Download the file as `service_account.json` into the `server/` directory.
+   - Set `GOOGLE_APPLICATION_CREDENTIALS="./service_account.json"` in `server/.env`.
+5. **Initialize BigQuery Table**:
+   - Run `python setup_bigquery.py` inside `server/` to automatically create the `earthquake_dataset` dataset and `map_store` table with the required schema.
 
-API Generation:
-    Go to APIs & Services > Create APIKEY
+### 2. Pinecone Vector Database
+1. Sign up for a free account at [Pinecone](https://app.pinecone.io).
+2. Create an API Key in the Pinecone console. Set `PINECONE_API` in `server/.env`.
+3. Run `python seed_pinecone.py` inside `server/` to automatically create the `mmi-idx` index (dimension 1024, metric cosine) and populate it with USGS MMI I–X definitions.
 
-For Service Account: 
-    Go to IAM and admin > Service Accounts > Create Service Account
+### 3. Tavily Search API
+1. Sign up for a free API key at [Tavily](https://tavily.com).
+2. Set `TAVILY_API_KEY` in `server/.env`.
 
-Important Notes:
-    serviceaccount.json must be encoded in base64
+---
 
-    - run base64 your_file.json in terminal
-    - use this as key
+## 💻 Local Development
 
-```
-
-
-### Local Development
-
+### 1. Backend (FastAPI)
 ```bash
-# Clone and setup
-git clone https://github.com/khantnhl/Quakemap.git
-cd Quakemap/server
+# Navigate to server directory
+cd server
+
+# Create and activate Python virtual environment
+python3 -m venv quakemap_venv
+source quakemap_venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
 
 # Configure environment
 cp .env.example .env
-
 # Edit .env with your credentials
 
-# Run development server
-uvicorn main:app --reload
+# Initialize BigQuery and Pinecone resources
+python setup_bigquery.py
+python seed_pinecone.py
+
+# Start FastAPI development server
+uvicorn main:app --reload --port 8000
+```
+
+### 2. Frontend (React / Vite)
+```bash
+# In a new terminal, navigate to client directory
+cd src/client
+
+# Install Node.js dependencies
+npm install
+
+# Start Vite development server
+npm run dev
 ```
 
 ### Project Structure
 
 ```
-server/
-├── main.py                    # 🚀 FastAPI application entry
-├── services/
-│   ├── crag.py               # 🤖 CRAG workflow implementation
-│   ├── utilities.py          # ☁️ GCS/BigQuery utilities  
-│   └── MMIRetriever.py       # 🎯 Pinecone vector retrieval
-├── routes/
-│   └── userUpload.py         # 📤 Upload/result endpoints
-└── requirements.txt          # 📦 Python dependencies
-```
-
-# Run frontend
-```bash
-# Navigate to client directory  
-cd client  
-  
-# Install Node.js dependencies  
-npm install  
-  
-# Start development server  
-npm run dev
+QuakemapMyanmar/
+├── server/
+│   ├── main.py                    # 🚀 FastAPI application entry
+│   ├── app.py                     # FastAPI app & routes setup
+│   ├── setup_bigquery.py          # 🛠️ BigQuery automated setup
+│   ├── seed_pinecone.py           # 🎯 Pinecone indexing script
+│   ├── services/
+│   │   ├── crag.py               # 🤖 LangGraph CRAG workflow
+│   │   ├── utilities.py          # ☁️ GCS/BigQuery utilities
+│   │   ├── manage_model.py       # 🧠 Gemini model interface
+│   │   └── MMIRetriever.py       # 🔍 Pinecone vector retrieval
+│   ├── routes/
+│   │   ├── userUpload.py         # 📤 Media upload & analysis trigger
+│   │   └── analyzeMedia.py       # 📊 Direct analysis endpoint
+│   ├── assets/
+│   │   ├── mmi_definitions.txt   # 📖 USGS MMI I-X definitions
+│   │   └── plot.sh               # 🗺️ GMT mapping script
+│   └── requirements.txt          # 📦 Python dependencies
+└── src/
+    └── client/                   # 💻 React / Vite frontend
 ```

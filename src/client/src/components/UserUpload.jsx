@@ -32,7 +32,8 @@ export default function UserUpload({ handleName, onUploadFinished }) {
       const formData = new FormData();
       formData.append('file', file);
 
-      const res = await fetch('https://quakemap.onrender.com/upload', {
+      const apiBase = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+      const res = await fetch(`${apiBase}/upload`, {
         method: 'POST',
         body: formData,
       });
