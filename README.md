@@ -60,31 +60,38 @@ Create a `.env` file inside `server/` (copy from `server/.env.example`):
 
 ```bash
 # Google Cloud Platform
+# Your Google Cloud Project ID
 GCS_PROJECT_ID="your-gcp-project-id"
 projectID="your-gcp-project-id"
 GCS_REGION="us-central1"
 
 # Service Account Credentials:
-# Option A (Recommended): Direct path to your downloaded JSON key
+# Option A (Recommended): Path to your downloaded service account JSON key file
 GOOGLE_APPLICATION_CREDENTIALS="./service_account.json"
-# Option B: Base64 string of the service account JSON key
-# GOOGLE_APPLICATION_CREDENTIALS_JSON="ewog..."
+
+# Option B: Base64-encoded one-line string of the service account JSON key file
+# Generate with: base64 -i service_account.json | tr -d '\n'
+# GOOGLE_APPLICATION_CREDENTIALS_JSON="ewogICJ0..."
 
 # Cloud Storage Bucket Name (globally unique across GCP)
 GCS_BUCKET="your-earthquake-bucket"
+
+# Signed URL expiration in seconds (default: 36000 = 10 hours)
 SIGNED_URL_TTL="36000"
 
 # BigQuery Dataset & Table
 BQ_DATASET="earthquake_dataset"
 BQ_TABLE="map_store"
 
-# Pinecone Vector Search
+# ── Vector Search (Pinecone) ──
+# API key from https://app.pinecone.io
 PINECONE_API="your-pinecone-api-key"
 
-# Tavily Web Search
+# ── Web Search Tool (Tavily) ──
+# API key from https://tavily.com
 TAVILY_API_KEY="your-tavily-api-key"
 
-# Server Port
+# ── Server Config ──
 PORT=8000
 ```
 
@@ -104,6 +111,7 @@ PORT=8000
    - Go to **IAM & Admin > Service Accounts > Create Service Account**.
    - Grant the following roles:
      - `Storage Object Admin`
+     - `Storage Admin`
      - `BigQuery Data Editor`
      - `BigQuery Job User`
      - `Vertex AI User`
@@ -131,12 +139,12 @@ PORT=8000
 # Navigate to server directory
 cd server
 
-# Create and activate Python virtual environment
-python3 -m venv quakemap_venv
-source quakemap_venv/bin/activate
+# Create and activate Python virtual environment. Use uv package manager: install at https://docs.astral.sh/uv/
+uv venv --python 3.11
+source .venv/bin/activate
 
 # Install dependencies
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 
 # Configure environment
 cp .env.example .env
@@ -146,8 +154,14 @@ cp .env.example .env
 python setup_bigquery.py
 python seed_pinecone.py
 
+# Test the MMI estimation workflow
+python test_pipeline.py test_page1.pdf 
+
 # Start FastAPI development server
 uvicorn main:app --reload --port 8000
+
+# In browser, open:
+http://127.0.0.1:8000/
 ```
 
 ### 2. Frontend (React / Vite)
@@ -160,6 +174,11 @@ npm install
 
 # Start Vite development server
 npm run dev
+
+# In browser, open:
+http://localhost:5173/
+
+# Upload photos of shaking/damage and test it out!
 ```
 
 ### Project Structure
