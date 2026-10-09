@@ -1,0 +1,6 @@
+96.0836 21.9747 Mandalay
+96.1561 16.8053 Yangon
+96.12972 19.745 Naypyidaw
+98.9847 18.7904 Chiang Mai
+100.5018 13.7563 Bangkok
+102.7183 25.0389 Kunming
