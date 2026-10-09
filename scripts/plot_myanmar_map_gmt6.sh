@@ -2,7 +2,7 @@
 set -euo pipefail
 
 gmt gmtset FORMAT_GEO_MAP D 
-gmt gmtset LABEL_FONT_SIZE 12p
+#gmt gmtset LABEL_FONT_SIZE 12p
 gmt gmtset FONT_ANNOT 12p
 
 # ── Inputs ──────────────────────────────────────────────────────────────────
