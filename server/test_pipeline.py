@@ -1,5 +1,6 @@
 import os
 import sys
+import argparse
 from dotenv import load_dotenv
 
 # Ensure server folder is in sys.path
@@ -8,19 +9,20 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 load_dotenv()
 
 from services.crag import MultimodalEarthquakeCRAG
-from services.utilities import upload_to_gcs, insert_analysis, fetch_from_db
+from services.utilities import upload_to_gcs, insert_analysis, fetch_from_db, append_to_csv
 
-def test_file(file_path: str):
+def test_file(file_path: str, csv_output: str = None):
     if not os.path.exists(file_path):
         print(f"❌ File not found: {file_path}")
-        return
+        sys.exit(1)
 
     filename = os.path.basename(file_path)
-    if filename.endswith(".pdf"):
+    lower_name = filename.lower()
+    if lower_name.endswith(".pdf"):
         mime_type = "application/pdf"
-    elif filename.endswith((".png")):
+    elif lower_name.endswith(".png"):
         mime_type = "image/png"
-    elif filename.endswith((".mp4")):
+    elif lower_name.endswith(".mp4"):
         mime_type = "video/mp4"
     else:
         mime_type = "image/jpeg"
@@ -46,14 +48,26 @@ def test_file(file_path: str):
     print("==================================================")
 
     final = result.get("final_analysis", {})
-    print(f"\n🎯 MMI Estimation: {final.get('mmi_estimation')}")
-    print(f"🎯 Confidence: {final.get('confidence')}")
+    loc = final.get("location", {})
+    coords = loc.get("coordinates") if isinstance(loc, dict) else [0.0, 0.0]
+    lat = float(coords[0]) if len(coords) >= 1 else 0.0
+    lon = float(coords[1]) if len(coords) >= 2 else 0.0
+    mmi = float(final.get("mmi_estimation", 5.0))
+    conf = float(final.get("confidence", 0.8))
+
+    print(f"\n🎯 MMI Estimation: {mmi}")
+    print(f"🎯 Confidence: {conf}")
+    print(f"📍 Location: {loc.get('address', 'Unknown')} (Coordinates: [latitude: {lat}, longitude: {lon}])")
+
+    if csv_output:
+        append_to_csv(csv_output, filename, lon, lat, mmi, conf)
+        print(f"💾 Record appended to CSV: {csv_output}")
 
     print(f"\n🚀 [Step 3] Storing analysis in BigQuery table '{os.environ.get('BQ_TABLE', 'map_store')}'...")
     insert_analysis({
         "blob_name": filename,
-        "mmi_estimation": final.get("mmi_estimation", 5.0),
-        "confidence": final.get("confidence", 0.8),
+        "mmi_estimation": mmi,
+        "confidence": conf,
         "map_url": "",
         "reasoning": final.get("reasoning", "")
     })
@@ -65,5 +79,11 @@ def test_file(file_path: str):
     print("\n🎉 End-to-end pipeline test completed successfully!")
 
 if __name__ == "__main__":
-    target = sys.argv[1] if len(sys.argv) > 1 else "test_page1.pdf"
-    test_file(target)
+    parser = argparse.ArgumentParser(description="Run earthquake CRAG analysis on a media file.")
+    parser.add_argument("file_path", nargs="?", default="test_page1.pdf", help="Input media file path")
+    parser.add_argument("csv_output", nargs="?", default=None, help="Optional CSV file to output extracted records")
+    parser.add_argument("--csv", dest="csv_flag", default=None, help="Optional CSV file to output extracted records")
+
+    args = parser.parse_args()
+    csv_file = args.csv_flag or args.csv_output or os.environ.get("CSV_OUT")
+    test_file(args.file_path, csv_output=csv_file)

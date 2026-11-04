@@ -51,8 +51,10 @@ def lazy_clients() -> tuple[storage.Client, bigquery.Client]:
             bq_client = bigquery.Client(project=project_id, credentials=credentials)
     return storage_client, bq_client
 
+from google.cloud.storage.retry import DEFAULT_RETRY
+
 def upload_to_gcs(file: Union[str, UploadFile], bucketname: str = None, blob_name: str = "placeholder") -> str:
-    """Upload bytes to GCS and return signed URL."""
+    """Upload bytes to GCS and return signed URL with retry and 300s timeout."""
     if not bucketname:
         bucketname = os.environ.get("GCS_BUCKET", "earthquake_bukt")
     
@@ -60,6 +62,10 @@ def upload_to_gcs(file: Union[str, UploadFile], bucketname: str = None, blob_nam
     
     bucket = storage_client.bucket(bucketname)
     blob = bucket.blob(blob_name)
+
+    # 5MB chunk size for stable streaming and resumable uploads
+    blob.chunk_size = 5 * 1024 * 1024
+    retry_policy = DEFAULT_RETRY.with_timeout(300)
 
     # stream upload
     if isinstance(file, str):
@@ -72,9 +78,21 @@ def upload_to_gcs(file: Union[str, UploadFile], bucketname: str = None, blob_nam
             content_type = "video/mp4"
 
         with open(file, "rb") as f:
-            blob.upload_from_file(f, content_type=content_type)
+            blob.upload_from_file(
+                f,
+                content_type=content_type,
+                timeout=300,
+                retry=retry_policy,
+            )
     else:
-        blob.upload_from_file(file.file, content_type=file.content_type)
+        if hasattr(file, "file") and hasattr(file.file, "seek"):
+            file.file.seek(0)
+        blob.upload_from_file(
+            file.file,
+            content_type=file.content_type,
+            timeout=300,
+            retry=retry_policy,
+        )
 
     ttl = int(os.environ.get("SIGNED_URL_TTL", "36000"))
     url = blob.generate_signed_url(
@@ -157,6 +175,25 @@ def fetch_from_db(blob_name):
         _analysis_cache[blob_name] = data
         return data
     return None
+
+def append_to_csv(csv_path: str, filename: str, lon: float, lat: float, mmi: float, confidence: float):
+    """
+    Appends an extracted record to a CSV/text file with header:
+    file,longitude,latitude,mmi_estimation,confidence
+    """
+    import csv
+    if not csv_path:
+        return
+    csv_dir = os.path.dirname(csv_path)
+    if csv_dir:
+        os.makedirs(csv_dir, exist_ok=True)
+    file_exists = os.path.exists(csv_path) and os.path.getsize(csv_path) > 0
+    with open(csv_path, mode="a", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow(["file", "longitude", "latitude", "mmi_estimation", "confidence"])
+        writer.writerow([filename, lon, lat, mmi, confidence])
+
 
 
 
