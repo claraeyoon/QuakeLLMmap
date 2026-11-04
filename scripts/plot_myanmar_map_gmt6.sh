@@ -9,7 +9,7 @@ gmt gmtset FONT_ANNOT 12p
 DATA_DIR="../data/myanmar"
 #INPUT_FILE="./assets/records.txt"
 #INPUT_FILE="./assets/records_mmi_gemini_ai.txt"
-INPUT_FILE="${DATA_DIR}/records_mmi_gemini_ai.txt"
+INPUT_FILE="${DATA_DIR}/records_mmi_gemini_ai.csv"
 #FAULT_FILE="./assets/rupture_finite_fault_myanmar.csv"
 FAULT_FILE="${DATA_DIR}/rupture_finite_fault_myanmar.csv"
 #STATION_FILE="./assets/stations.txt"
@@ -125,7 +125,7 @@ EOF
 #    gmt plot "$STATION_FILE" $BOUNDS $PROJECTION -St0.6c -C"$CPT_FILE" -W0.5p,black -h1
     gmt plot "$STATION_FILE" $BOUNDS $PROJECTION -Si0.4c -C"$CPT_FILE" -W0.5p,black
     awk '{print $1, $2, $4}' "$STATION_FILE" | gmt text $BOUNDS $PROJECTION -D0/0.3 -F+f9p,Helvetica,black
-    gmt plot "$INPUT_FILE" $BOUNDS $PROJECTION -Sc0.2c -C"$CPT_FILE" -W0.25p,black
+    awk -F, 'NR>1 {print $2, $3, $4}' "$INPUT_FILE" | gmt plot $BOUNDS $PROJECTION -Sc0.2c -C"$CPT_FILE" -W0.25p,black
 
     # Color scale
 #    gmt colorbar -C"$CPT_FILE" -Dx8c/-1.2c+w10c/0.5c+jTC+h -Bx2+l"MMI"
@@ -204,7 +204,7 @@ EOF
     # Point observations (circles) and seismic stations (triangles)
     gmt plot "$STATION_FILE" $ZBOUNDS $ZPROJECTION -Si0.4c -C"$CPT_FILE" -W1.0p,black
     awk '{print $1, $2, $4}' "$STATION_FILE" | gmt text $ZBOUNDS $ZPROJECTION -D0/0.4 -F+f12p,Helvetica,black
-    gmt plot "$INPUT_FILE" $ZBOUNDS $ZPROJECTION -Sc0.2c -C"$CPT_FILE" -W1.0p,black
+    awk -F, 'NR>1 {print $2, $3, $4}' "$INPUT_FILE" | gmt plot $ZBOUNDS $ZPROJECTION -Sc0.2c -C"$CPT_FILE" -W1.0p,black
 
     # Color scale
 #    gmt colorbar -C"$CPT_FILE" -Dx4c/-1.2c+w8c/0.5c+jTC+h -Bx1+l"MMI" -G1/10 --FONT=18p
@@ -255,7 +255,7 @@ EOF
     # Point observations (circles) and seismic stations (triangles)
     gmt plot "$STATION_FILE" $ZDMBOUNDS $ZDMPROJECTION -Si0.4c -C"$CPT_FILE" -W1.0p,black
     awk '{print $1, $2, $4}' "$STATION_FILE" | gmt text $ZDMBOUNDS $ZDMPROJECTION -D0/0.4 -F+f12p,Helvetica,black
-    gmt plot "$INPUT_FILE" $ZDMBOUNDS $ZDMPROJECTION -Sc0.3c -C"$CPT_FILE" -W1.0p,black
+    awk -F, 'NR>1 {print $2, $3, $4}' "$INPUT_FILE" | gmt plot $ZDMBOUNDS $ZDMPROJECTION -Sc0.3c -C"$CPT_FILE" -W1.0p,black
 
     # Color scale
 #    gmt colorbar -C"$CPT_FILE" -Dx4c/-1.2c+w8c/0.5c+jTC+h -Bx1+l"MMI" -G1/10 --FONT=18p
@@ -299,7 +299,7 @@ EOF
     # Point observations (circles) and seismic stations (triangles)
     gmt plot "$STATION_FILE" $ZDNBOUNDS $ZDNPROJECTION -Si0.4c -C"$CPT_FILE" -W1.0p,black
     awk '{print $1, $2, $4}' "$STATION_FILE" | gmt text $ZDNBOUNDS $ZDNPROJECTION -D0/0.4 -F+f12p,Helvetica,black
-    gmt plot "$INPUT_FILE" $ZDNBOUNDS $ZDNPROJECTION -Sc0.3c -C"$CPT_FILE" -W1.0p,black
+    awk -F, 'NR>1 {print $2, $3, $4}' "$INPUT_FILE" | gmt plot $ZDNBOUNDS $ZDNPROJECTION -Sc0.3c -C"$CPT_FILE" -W1.0p,black
 
     # Color scale
 #    gmt colorbar -C"$CPT_FILE" -Dx4c/-1.2c+w8c/0.5c+jTC+h -Bx1+l"MMI" -G1/10 --FONT=18p

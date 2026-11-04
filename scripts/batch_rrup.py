@@ -32,20 +32,21 @@ def read_input_points(filepath, delimiter=None):
     """
     points = []
     with open(filepath, "r") as f:
+        next(f) # skip header
         for line_num, line in enumerate(f, start=1):
             stripped = line.strip()
             if not stripped or stripped.startswith("#"):
                 continue
 
             parts = stripped.split(delimiter) if delimiter else stripped.split()
-            if len(parts) < 3:
+            if len(parts) < 5:
                 raise ValueError(
                     f"Line {line_num} in {filepath} does not have at least "
-                    f"3 columns (lon, lat, intensity): '{line.rstrip()}'"
+                    f"5 columns (file, longitude, latitude, mmi_estimation, confidence): '{line.rstrip()}'"
                 )
 
-            lon, lat, intensity = float(parts[0]), float(parts[1]), float(parts[2])
-            points.append((lon, lat, intensity))
+            filename, lon, lat, intensity, confidence = (parts[0]), float(parts[1]), float(parts[2]), float(parts[3]), float(parts[4])
+            points.append((filename, lon, lat, intensity, confidence))
 
     return points
 
@@ -57,18 +58,19 @@ def compute_rrup_for_points(rupture_geojson, points, site_depth_km=0.0):
     Returns a list of (lon, lat, intensity, rrup) tuples.
     """
     results = []
-    for lon, lat, intensity in points:
+    for filename, lon, lat, intensity, confidence in points:
         rrup = compute_rrup(rupture_geojson, lon, lat, site_depth_km)
-        results.append((lon, lat, intensity, rrup))
+        results.append((filename, lon, lat, intensity, confidence, rrup))
     return results
 
 
 def write_output(results, output_path, delimiter=" ", precision=4):
     with open(output_path, "w") as f:
-        for lon, lat, intensity, rrup in results:
+        f.write("file,longitude,latitude,mmi_estimation,confidence,rrup_km\n") # header
+        for filename, lon, lat, intensity, confidence, rrup in results:
             f.write(
-                f"{lon}{delimiter}{lat}{delimiter}{intensity}"
-                f"{delimiter}{rrup:.{precision}f}\n"
+                f"{filename}{delimiter}{lon}{delimiter}{lat}{delimiter}{intensity}"
+                f"{delimiter}{confidence}{delimiter}{rrup:.{precision}f}\n"
             )
 
 
@@ -111,7 +113,7 @@ def main():
 
     write_output(results, args.output_file, delimiter=output_delim)
 
-    rrup_vals = np.array([r[3] for r in results])
+    rrup_vals = np.array([r[5] for r in results])
     print(f"Wrote {len(results)} rows to {args.output_file}")
     print(f"Rrup range: {rrup_vals.min():.3f} - {rrup_vals.max():.3f} km "
           f"(mean {rrup_vals.mean():.3f} km)")

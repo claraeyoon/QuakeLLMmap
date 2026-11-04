@@ -5,7 +5,7 @@ Creates a plot of Modified Mercalli Intensity (MMI, linear y-axis) vs.
 rupture distance (Rrup, log x-axis) from multiple data sources for the
 2025 Mw 7.7 Mandalay, Myanmar earthquake (us7000pn9s):
 
-  1. Gemini AI LLM MMI estimates (records_test.txt)
+  1. Gemini AI LLM MMI estimates (records_test.csv)
        columns: longitude latitude intensity rrup_distance
        plotted as large circles
 
@@ -122,20 +122,23 @@ def parse_cpt(filepath):
 
 def read_records_file(filepath):
     """
-    Read records_test.txt: whitespace-delimited columns
+    Read records_test.csv: whitespace-delimited columns
         longitude latitude intensity rrup_distance
     Returns (rrup_array, mmi_array).
     """
     lons, lats, mmis, rrups = [], [], [], []
     with open(filepath, "r") as f:
+        next(f) # skip header
         for line in f:
             stripped = line.strip()
             if not stripped or stripped.startswith("#"):
                 continue
-            parts = stripped.split()
-            if len(parts) < 4:
+            parts = stripped.split(',')
+            print(parts)
+            if len(parts) < 6:
                 continue
-            lon, lat, mmi, rrup = map(float, parts[:4])
+            lon, lat, mmi, conf, rrup = map(float, parts[1:6])
+            print(lon,lat,mmi,conf,rrup)
             lons.append(lon)
             lats.append(lat)
             mmis.append(mmi)
@@ -469,8 +472,8 @@ def main():
         description="Plot MMI (linear) vs. Rrup (log) from multiple earthquake intensity data sources, colored by shake.cpt."
     )
     parser.add_argument(
-        "--records", default="records_test.txt",
-        help="Path to AI LLM records file (lon lat intensity rrup) (default: records_test.txt)"
+        "--records", default="records_test.csv",
+        help="Path to AI LLM records file (filename,lon,lat,intensity,confidence,rrup) (default: records_test.csv)"
     )
     parser.add_argument(
         "--stationlist", default="stationlist_test.json",
