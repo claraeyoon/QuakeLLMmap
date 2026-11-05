@@ -65,9 +65,20 @@ GCS_PROJECT_ID="your-gcp-project-id"
 projectID="your-gcp-project-id"
 GCS_REGION="us-central1"
 
+# ── Vertex AI / Gemini Model ──
+# Location endpoint for Vertex AI.
+# 'global' (recommended for gemini-3.8-flash) or 'us' (US multi-region).
+# Single regions like 'us-central1' do NOT host gemini-3.8-flash.
+VERTEX_LOCATION="global"
+GEMINI_MODEL="gemini-3.8-flash"
+#VERTEX_LOCATION="us-central1"
+#GEMINI_MODEL="gemini-2.5-flash"
+
 # Service Account Credentials:
 # Option A (Recommended): Path to your downloaded service account JSON key file
 GOOGLE_APPLICATION_CREDENTIALS="./service_account.json"
+
+GEMINI_API_KEY="your-gemini-api-key"
 
 # Option B: Base64-encoded one-line string of the service account JSON key file
 # Generate with: base64 -i service_account.json | tr -d '\n'
@@ -90,6 +101,11 @@ PINECONE_API="your-pinecone-api-key"
 # ── Web Search Tool (Tavily) ──
 # API key from https://tavily.com
 TAVILY_API_KEY="your-tavily-api-key"
+
+# ── Google Maps / Geocoding Platform (Optional) ──
+# API key from Google Cloud Console with 'Geocoding API' enabled
+# Used to resolve Google Maps links and place names to latitude/longitude
+GOOGLE_MAPS_API_KEY="your-google-maps-api-key"
 
 # ── Server Config ──
 PORT=8000
