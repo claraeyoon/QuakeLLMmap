@@ -8,7 +8,7 @@ except ImportError:
 import vertexai
 from vertexai.generative_models import Part
 from services.MMIRetriever import MMIRetriever
-from services.manage_model import get_response
+from services.manage_model import get_response, init_vertexai
 
 from dotenv import load_dotenv
 from google.auth.transport.requests import Request
@@ -26,9 +26,7 @@ projectID = os.environ.get('projectID') or os.environ.get('GCS_PROJECT_ID')
 TRAVILY_API_KEY = os.environ.get('TAVILY_API_KEY')
 
 try:
-    credentials = load_credentials()
-    if projectID:
-        vertexai.init(project=projectID, location=os.environ.get('GCS_REGION', 'us-central1'), credentials=credentials)
+    init_vertexai()
 except Exception as e:
     print(f"Notice: vertexai init deferred: {e}")
 

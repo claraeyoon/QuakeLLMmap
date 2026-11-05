@@ -50,17 +50,33 @@ class MMIRetriever:
         """Embeds texts with Embedding Model"""
 
         task = task
-        model = TextEmbeddingModel.from_pretrained(self.EMBEDDING_MODEL_NAME)
-        kwargs = dict(output_dimensionality=self.DIMENSIONALITY) if self.DIMENSIONALITY else {}
+        try:
+            model = TextEmbeddingModel.from_pretrained(self.EMBEDDING_MODEL_NAME)
+        except Exception:
+            # If the embedding model is not provisioned on the current endpoint (e.g. 'global' or 'us'),
+            # fall back to us-central1 for embedding generation, then restore previous location
+            import google.cloud.aiplatform.initializer as aiplatform_initializer
+            from services.utilities import load_credentials
+            from services.manage_model import init_vertexai
 
-        embeddings = []
+            prev_loc = getattr(aiplatform_initializer.global_config, "location", None)
+            project_id = os.environ.get('projectID') or os.environ.get('GCS_PROJECT_ID')
+            embed_loc = os.environ.get("EMBEDDING_LOCATION", "us-central1")
+            
+            init_vertexai(project=project_id, location=embed_loc, credentials=load_credentials())
+            model = TextEmbeddingModel.from_pretrained(self.EMBEDDING_MODEL_NAME)
 
-        for text in texts:
-            text_input = TextEmbeddingInput(text, task)
-            embedding = model.get_embeddings([text_input], **kwargs)
-            embeddings.append(embedding[0].values)
+            kwargs = dict(output_dimensionality=self.DIMENSIONALITY) if self.DIMENSIONALITY else {}
+            embeddings = []
+            for text in texts:
+                text_input = TextEmbeddingInput(text, task)
+                embedding = model.get_embeddings([text_input], **kwargs)
+                embeddings.append(embedding[0].values)
 
-        return embeddings
+            # Restore previous vertexai location for generative models
+            if prev_loc and prev_loc != embed_loc:
+                init_vertexai(project=project_id, location=prev_loc)
+            return embeddings
     
     def indexing(self, docsPath : str):
         """ Indexing to PineCone VectorStore """
