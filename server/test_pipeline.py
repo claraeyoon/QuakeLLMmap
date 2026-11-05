@@ -38,7 +38,8 @@ def test_file(file_path: str, csv_output: str = None):
     result = crag.analyze_media_and_traverse_states(
         blob_name=filename,
         signed_url=signed_url,
-        mime_type=mime_type
+        mime_type=mime_type,
+        local_path=file_path
     )
 
     print("\n==================================================")

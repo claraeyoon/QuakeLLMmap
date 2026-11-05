@@ -544,6 +544,7 @@ class State(TypedDict, total=False):
     generation : str
     extracted_text : str
     extracted_location : Dict[str, Any]
+    local_path : str
 
 GRADE_DOCUMENTS_SCHEMA = {
     "type": "object",
@@ -555,6 +556,32 @@ GRADE_DOCUMENTS_SCHEMA = {
         }
     },
     "required": ["binary_score"]
+}
+
+BATCH_GRADE_DOCUMENTS_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "grades": {
+            "type": "array",
+            "description": "Relevance evaluation for each retrieved document",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "document_id": {
+                        "type": "integer",
+                        "description": "1-based index of the document"
+                    },
+                    "binary_score": {
+                        "type": "string",
+                        "description": "'yes' if relevant to earthquake intensity/damage assessment, 'no' otherwise",
+                        "enum": ["yes", "no"]
+                    }
+                },
+                "required": ["document_id", "binary_score"]
+            }
+        }
+    },
+    "required": ["grades"]
 }
 
 SEISMIC_ANALYSIS_SCHEMA = {
@@ -632,7 +659,7 @@ class MultimodalEarthquakeCRAG:
         self.app = workflow.compile()
 
     
-    def analyze_media_and_traverse_states(self, blob_name : str, signed_url : str, mime_type : str = None):
+    def analyze_media_and_traverse_states(self, blob_name : str, signed_url : str, mime_type : str = None, local_path : str = None):
         url_lower = signed_url.lower()
         if mime_type and mime_type in {"image/jpeg", "image/png", "image/webp", "video/mp4", "application/pdf"}:
             pass
@@ -655,7 +682,8 @@ class MultimodalEarthquakeCRAG:
         inputs = {
             "blob_name": blob_name,
             "signed_url": signed_url,
-            "mime_type": mime_type
+            "mime_type": mime_type,
+            "local_path": local_path or (blob_name if os.path.exists(blob_name) else None)
         }
         
         for output in self.app.stream(inputs):
@@ -708,14 +736,31 @@ class MultimodalEarthquakeCRAG:
             print("---DECISION: SUFFICIENT DOCUMENTS, PROCEED TO ANALYSIS---")
             return "final_analysis"
     
-    def get_media_bytes(self, blob_name: str, signed_url: str) -> Optional[bytes]:
+    def get_media_bytes(self, blob_name: str, signed_url: str = None, local_path: str = None) -> Optional[bytes]:
         """Downloads or retrieves cached bytes for a media blob."""
         if blob_name in self._media_cache:
             return self._media_cache[blob_name]
+        if local_path and local_path in self._media_cache:
+            return self._media_cache[local_path]
+
+        # 1. Direct local file check (Optimization #3: Avoids slow network GCS round-trip)
+        candidate_paths = [p for p in (local_path, blob_name) if p]
+        for path in candidate_paths:
+            if os.path.exists(path) and os.path.isfile(path):
+                try:
+                    with open(path, "rb") as f:
+                        data = f.read()
+                    print(f"✅ Loaded {len(data)} bytes directly from local file '{path}'")
+                    self._media_cache[blob_name] = data
+                    if local_path:
+                        self._media_cache[local_path] = data
+                    return data
+                except Exception as e:
+                    print(f"Notice: Could not read local file '{path}': {e}")
 
         bucket = os.environ.get("GCS_BUCKET", "quakemap-media-data")
 
-        # 1. Direct bytes via GCS storage client
+        # 2. Direct bytes via GCS storage client
         try:
             from services.utilities import lazy_clients
             from google.cloud.storage.retry import DEFAULT_RETRY
@@ -728,7 +773,7 @@ class MultimodalEarthquakeCRAG:
         except Exception as e:
             print(f"Notice: Direct GCS download notice: {e}")
 
-        # 2. Download bytes via HTTP signed URL
+        # 3. Download bytes via HTTP signed URL
         if signed_url and signed_url.startswith("http"):
             try:
                 import requests
@@ -740,25 +785,15 @@ class MultimodalEarthquakeCRAG:
             except Exception as e:
                 print(f"Notice: HTTP signed_url download notice: {e}")
 
-        # 3. Check local file if accessible
-        if os.path.exists(blob_name):
-            try:
-                with open(blob_name, "rb") as f:
-                    data = f.read()
-                self._media_cache[blob_name] = data
-                return data
-            except Exception:
-                pass
-
         return None
 
-    def get_media_part(self, blob_name: str, signed_url: str, mime_type: str) -> Part:
+    def get_media_part(self, blob_name: str, signed_url: str = None, mime_type: str = None, local_path: str = None) -> Part:
         """
         Builds a Part object for Vertex AI Gemini.
         Vertex AI requires 'gs://bucket/blob' format or raw bytes via Part.from_data.
         HTTPS signed URLs are NOT supported by Part.from_uri.
         """
-        data = self.get_media_bytes(blob_name, signed_url)
+        data = self.get_media_bytes(blob_name, signed_url, local_path=local_path)
         if data:
             return Part.from_data(data=data, mime_type=mime_type)
 
@@ -774,12 +809,13 @@ class MultimodalEarthquakeCRAG:
         blob_name = state["blob_name"]
         signed_url = state["signed_url"]
         mime_type = state["mime_type"]
+        local_path = state.get("local_path")
 
         # Attempt PDF text & location pre-extraction
         pdf_text = ""
         pre_extracted_loc = {"address": "Unknown", "coordinates": [0.0, 0.0]}
         if mime_type == "application/pdf" or blob_name.lower().endswith(".pdf"):
-            data = self.get_media_bytes(blob_name, signed_url)
+            data = self.get_media_bytes(blob_name, signed_url, local_path=local_path)
             if data:
                 pdf_text = extract_text_from_pdf_bytes(data)
                 pre_extracted_loc = parse_location_from_text(pdf_text, pdf_bytes=data)
@@ -803,7 +839,7 @@ class MultimodalEarthquakeCRAG:
             </System Prompt>
         """
 
-        media_part = self.get_media_part(blob_name, signed_url, mime_type)
+        media_part = self.get_media_part(blob_name, signed_url, mime_type, local_path=local_path)
         contents = [Part.from_text(Description_Prompt)]
         if pdf_text:
             contents.append(Part.from_text(f"Extracted Document Text from '{blob_name}':\n\"\"\"\n{pdf_text}\n\"\"\""))
@@ -835,7 +871,7 @@ class MultimodalEarthquakeCRAG:
         }
     
     def grade_documents(self, state):
-        print("---GRADE RETRIEVED DOCUMENTS---")
+        print("---GRADE RETRIEVED DOCUMENTS (BATCH)---")
 
         context = state["context_summary"]
         documents = state.get("mmi_documents", [])
@@ -849,33 +885,43 @@ class MultimodalEarthquakeCRAG:
                 "web_search": "Yes"
             }
 
-        import time
-        for i, doc in enumerate(documents, 1):
-            grader_prompt = f"""
-                You are a grader assessing relevance of seismic/earthquake documents to earthquake damage assessment.
-                If the document contains information about earthquake intensity scales (like MMI), building damage patterns,
-                seismic indicators, or earthquake impact assessment, grade it as relevant.
-                Retrieved document: {doc.page_content}
-            Analysis context: {context}
-            """
+        docs_formatted = "\n\n".join(
+            [f"[Document {i}]\n{doc.page_content}" for i, doc in enumerate(documents, 1)]
+        )
 
-            try:
-                contents = [Part.from_text(grader_prompt)]
-                score = self.get_structured_response(contents, GRADE_DOCUMENTS_SCHEMA)
+        batch_grader_prompt = f"""
+        You are a grader assessing the relevance of retrieved seismic reference documents to an earthquake damage assessment.
+        For each document, determine if it contains information about earthquake intensity scales (like MMI), building damage patterns,
+        seismic indicators, or earthquake impact assessment. Grade each as 'yes' (relevant) or 'no' (not relevant).
 
-                if score.get("binary_score") == "yes":
+        Analysis context:
+        {context}
+
+        Retrieved Documents:
+        {docs_formatted}
+        """
+
+        try:
+            contents = [Part.from_text(batch_grader_prompt)]
+            score_data = self.get_structured_response(contents, BATCH_GRADE_DOCUMENTS_SCHEMA)
+            grades = score_data.get("grades", [])
+            grade_map = {
+                int(g.get("document_id", idx)): str(g.get("binary_score", "yes")).lower()
+                for idx, g in enumerate(grades, 1)
+            }
+
+            for i, doc in enumerate(documents, 1):
+                score = grade_map.get(i, "yes")
+                if score == "yes":
                     print(f"---GRADE: DOCUMENT {i} RELEVANT---")
                     filtered_docs.append(doc)
                 else:
                     print(f"---GRADE: DOCUMENT {i} NOT RELEVANT---")
                     web_search = "Yes"
-            except Exception as e:
-                print(f"Notice: Document {i} grading encountered rate limit/error ({e}). Defaulting to RELEVANT.")
-                filtered_docs.append(doc)
+        except Exception as e:
+            print(f"Notice: Batch document grading notice ({e}). Defaulting all to RELEVANT.")
+            filtered_docs = list(documents)
 
-            # Pacing delay between grading calls to avoid Vertex AI burst quota
-            time.sleep(1.0)
-        
         if not filtered_docs:
             web_search = "Yes"
 
@@ -936,6 +982,7 @@ class MultimodalEarthquakeCRAG:
         blob_name = state["blob_name"]
         signed_url = state.get("signed_url", "")
         mime_type = state.get("mime_type", "")
+        local_path = state.get("local_path")
         extracted_text = state.get("extracted_text", "")
         extracted_location = state.get("extracted_location", {})
         
@@ -981,7 +1028,7 @@ class MultimodalEarthquakeCRAG:
         
         # Provide both the prompt AND the media evidence to Gemini
         try:
-            media_part = self.get_media_part(blob_name, signed_url, mime_type)
+            media_part = self.get_media_part(blob_name, signed_url, mime_type, local_path=local_path)
             contents = [Part.from_text(final_prompt), media_part]
         except Exception:
             contents = [Part.from_text(final_prompt)]
