@@ -21,8 +21,7 @@ def run_quick_test():
     )
 
     # 3. Process Local Inbound Files
-#    inbound_dir = Path("data/events/us7000pn9s/inbound")
-    inbound_dir = Path("data/events/us7000pn9s/test_inbound") #CY
+    inbound_dir = Path("data/events/us7000pn9s/inbound")
     print(f"🚀 Scanning inbound directory: {inbound_dir}")
     result = orchestrator.run_on_inbound_directory(inbound_dir)
 

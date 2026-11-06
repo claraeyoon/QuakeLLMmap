@@ -1,4 +1,6 @@
 from __future__ import annotations
+import os
+import json
 import re
 import urllib.parse
 from dataclasses import dataclass
@@ -65,24 +67,56 @@ class GeolocationResolver:
         return GeolocationResult()
 
     @classmethod
+    def get_google_maps_api_key(cls) -> Optional[str]:
+        """Retrieves GOOGLE_MAPS_API_KEY from environment or .env files."""
+        key = os.getenv("GOOGLE_MAPS_API_KEY")
+        if key:
+            return key.strip().strip('"').strip("'")
+        for p in [Path(".env"), Path("server/.env"), Path("../server/.env")]:
+            if p.exists():
+                for line in p.read_text(encoding="utf-8", errors="ignore").splitlines():
+                    line = line.strip()
+                    if line.startswith("GOOGLE_MAPS_API_KEY=") and not line.startswith("#"):
+                        _, v = line.split("=", 1)
+                        v = v.strip().strip('"').strip("'")
+                        if v:
+                            os.environ["GOOGLE_MAPS_API_KEY"] = v
+                            return v
+        return None
+
+    @classmethod
+    def has_google_maps_url(cls, text: str) -> bool:
+        """Checks if text contains a Google Maps link."""
+        return bool(re.search(
+            r'https?://(?:maps\.app\.goo\.gl|goo\.gl/maps|maps\.google\.[a-z.]+|[a-z0-9.-]*google\.[a-z.]+/maps)[^\s<>\"\')]*',
+            text, re.IGNORECASE
+        ))
+
+    @classmethod
     def extract_from_text(cls, text: str) -> Optional[GeolocationResult]:
-        """Extracts coordinates and address from text containing Geolocation sections, URLs, or coordinate strings."""
+        """
+        Extracts coordinates and address from text.
+
+        Precedence Rules:
+        1. Direct Latitude & Longitude in Text:
+           If latitude and longitude are already provided in the input text (via DMS,
+           directional decimal, or decimal coordinate pairs), they are extracted directly.
+           This takes strict precedence over any Google Maps API, even if a Google Maps link
+           is also provided in the input file.
+        2. Google Maps link (e.g. page-62.pdf without direct coordinates):
+           Uses the Google Geocoding API (using GOOGLE_MAPS_API_KEY from .env) to retrieve
+           the latitude and longitude coordinates.
+        3. Other Map URLs:
+           Parses OpenStreetMap, Apple Maps, Bing Maps, or geo: URIs.
+        """
         if not text:
             return None
 
         # Clean text
         text_clean = text.strip()
 
-        # Try 1: Map URLs first (direct ground truth link)
-        res_url = cls.extract_from_map_url(text_clean)
-        if res_url and res_url.is_valid:
-            # Check if an address was accompanying the section
-            addr = cls.extract_section_address(text_clean)
-            if addr and not res_url.address:
-                res_url.address = addr
-            return res_url
-
-        # Try 2: Degrees, Minutes, Seconds (DMS)
+        # ── Precedence 1: Direct Latitude & Longitude in Text ──
+        # 1a. Degrees, Minutes, Seconds (DMS)
         res_dms = cls.extract_from_dms(text_clean)
         if res_dms and res_dms.is_valid:
             addr = cls.extract_section_address(text_clean)
@@ -90,7 +124,7 @@ class GeolocationResolver:
                 res_dms.address = addr
             return res_dms
 
-        # Try 3: Decimal degrees with directional indicators (e.g. 21.880353 N, 95.984881 E)
+        # 1b. Decimal degrees with directional indicators (e.g. 21.880353 N, 95.984881 E)
         res_dec_dir = cls.extract_from_decimal_directional(text_clean)
         if res_dec_dir and res_dec_dir.is_valid:
             addr = cls.extract_section_address(text_clean)
@@ -98,13 +132,216 @@ class GeolocationResolver:
                 res_dec_dir.address = addr
             return res_dec_dir
 
-        # Try 4: Bracketed or labeled decimal coordinates [lat, lon] or lat: ..., lon: ...
+        # 1c. Decimal coordinate pairs (e.g. 21.87314, 95.97550 or [21.88, 95.98] or lat:... lon:...)
         res_dec = cls.extract_from_decimal(text_clean)
         if res_dec and res_dec.is_valid:
             addr = cls.extract_section_address(text_clean)
             if addr and not res_dec.address:
                 res_dec.address = addr
             return res_dec
+
+        # ── Precedence 2: Google Maps Link -> Google Geocoding API ──
+        if cls.has_google_maps_url(text_clean):
+            res_geocode = cls.extract_from_google_maps_geocoding(text_clean)
+            if res_geocode and res_geocode.is_valid:
+                return res_geocode
+
+        # ── Precedence 3: Other Map URLs (OpenStreetMap, Apple Maps, etc.) ──
+        res_url = cls.extract_from_map_url(text_clean)
+        if res_url and res_url.is_valid:
+            addr = cls.extract_section_address(text_clean)
+            if addr and not res_url.address:
+                res_url.address = addr
+            return res_url
+
+        return None
+
+    @classmethod
+    def _extract_surrounding_address(cls, text: str, match_pos: int) -> Optional[str]:
+        """Extracts the address or place description immediately preceding the map link."""
+        prefix_chunk = text[:match_pos].rstrip()
+        lines = prefix_chunk.splitlines()
+        addr_lines = []
+        for l in reversed(lines):
+            l_str = l.strip()
+            if not l_str:
+                if addr_lines:
+                    break
+                continue
+            if re.search(r'^(?:Source|Created by|Short Description|Geolocation|\(Address)', l_str, re.IGNORECASE):
+                m_sub = re.search(r'[:]\s*(.+)$', l_str)
+                if m_sub and len(m_sub.group(1).strip()) > 3:
+                    addr_lines.insert(0, m_sub.group(1).strip())
+                break
+            addr_lines.insert(0, l_str)
+            if len(addr_lines) >= 3:
+                break
+        if addr_lines:
+            cand = " ".join(addr_lines).strip(" ,;:-()")
+            cand = re.sub(r'https?://\S+', '', cand).strip(" ,;:-()")
+            if len(cand) >= 3:
+                return cand
+        return cls.extract_section_address(text)
+
+    @classmethod
+    def _get_ssl_context(cls):
+        """Returns an SSL context suitable for macOS/sandboxed environments."""
+        import ssl
+        try:
+            import certifi
+            return ssl.create_default_context(cafile=certifi.where())
+        except Exception:
+            pass
+        # Fallback to server/.venv certifi if it exists
+        venv_certifi = Path("server/.venv/lib")
+        if venv_certifi.exists():
+            for p in venv_certifi.glob("**/certifi/cacert.pem"):
+                try:
+                    return ssl.create_default_context(cafile=str(p))
+                except Exception:
+                    pass
+        try:
+            return ssl.create_default_context()
+        except Exception:
+            return ssl._create_unverified_context()
+
+    @classmethod
+    def _call_google_geocoding_api(cls, params: Dict[str, str], api_key: str, timeout: float = 6.0) -> Optional[Dict[str, Any]]:
+        """Makes an HTTP request to the Google Geocoding API."""
+        import urllib.request
+        import urllib.error
+        try:
+            query_str = urllib.parse.urlencode(params)
+            endpoint = f"https://maps.googleapis.com/maps/api/geocode/json?{query_str}&key={api_key}"
+            req = urllib.request.Request(endpoint, headers={"User-Agent": "QuakeAgent/1.0"})
+            ctx = cls._get_ssl_context()
+            with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                status = data.get("status")
+                if status == "OK" and data.get("results"):
+                    return data["results"][0]
+                elif status == "ZERO_RESULTS":
+                    return None
+                else:
+                    err_msg = data.get("error_message") or status
+                    print(f"   ⚠️ [Google Geocoding API] Status: {err_msg}")
+                    return None
+        except Exception as e:
+            return None
+
+    @classmethod
+    def extract_from_google_maps_geocoding(cls, text: str) -> Optional[GeolocationResult]:
+        """
+        Uses the Google Geocoding API (using GOOGLE_MAPS_API_KEY from .env) to retrieve
+        latitude and longitude coordinates when a Google Maps link is provided.
+        """
+        gm_match = re.search(
+            r'https?://(?:maps\.app\.goo\.gl|goo\.gl/maps|maps\.google\.[a-z.]+|[a-z0-9.-]*google\.[a-z.]+/maps)[^\s<>\"\')]*',
+            text, re.IGNORECASE
+        )
+        if not gm_match:
+            return None
+
+        gm_url = gm_match.group(0).rstrip(".,;)")
+        surrounding_addr = cls._extract_surrounding_address(text, gm_match.start())
+        api_key = cls.get_google_maps_api_key()
+
+        # Step 1: Expand shortened Google Maps URL if applicable
+        expanded_url = gm_url
+        if "goo.gl" in gm_url:
+            expanded = cls._resolve_short_url(gm_url)
+            if expanded:
+                expanded_url = expanded
+
+        place_name = None
+        url_coords = None
+
+        # Check for place name in expanded URL: /place/<name>/
+        m_place = re.search(r'/place/([^/@]+)', expanded_url)
+        if m_place:
+            place_name = urllib.parse.unquote(m_place.group(1).replace("+", " ")).strip()
+
+        # Check for exact POI coordinates in data parameters: !3d<lat>!4d<lon>
+        m_poi = re.search(r'!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)', expanded_url)
+        if m_poi:
+            url_coords = (float(m_poi.group(1)), float(m_poi.group(2)))
+        else:
+            # Fallback to viewport coords: /@lat,lon or ?q=lat,lon or ll=lat,lon
+            m_coords = re.search(r'[@?&](?:q|query|ll|loc:)?(-?\d+\.\d+),(-?\d+\.\d+)', expanded_url)
+            if m_coords:
+                url_coords = (float(m_coords.group(1)), float(m_coords.group(2)))
+
+        # Step 2: Query Google Geocoding API
+        if api_key:
+            # Query candidate 1: Specific place name extracted from expanded URL (e.g. "Sky Villa, Mandalay, Myanmar")
+            if place_name:
+                queries = [
+                    f"{place_name}, Mandalay, Myanmar",
+                    f"{place_name}, Myanmar",
+                    place_name
+                ]
+                for q in queries:
+                    res = cls._call_google_geocoding_api({"address": q}, api_key)
+                    if res:
+                        lat = float(res["geometry"]["location"]["lat"])
+                        lon = float(res["geometry"]["location"]["lng"])
+                        # If result is within target country bounds (e.g. 13-27 N, 91-103 E)
+                        if 13.0 <= lat <= 27.0 and 91.0 <= lon <= 103.0:
+                            addr = place_name or res.get("formatted_address")
+                            print(f"📍 [Google Geocoding API] Resolved ({lat:.6f}, {lon:.6f}) for '{addr}' via Geocoding API")
+                            return GeolocationResult(
+                                latitude=lat,
+                                longitude=lon,
+                                address=addr,
+                                source="google_geocoding_api",
+                                confidence=1.0,
+                                raw_match=gm_url
+                            )
+
+            # Query candidate 2: Reverse-geocode coordinates from URL to get precise formatted address & geocoded pin
+            if url_coords:
+                res = cls._call_google_geocoding_api({"latlng": f"{url_coords[0]},{url_coords[1]}"}, api_key)
+                lat, lon = url_coords
+                addr = place_name or surrounding_addr
+                if res:
+                    addr = place_name or res.get("formatted_address") or addr
+                print(f"📍 [Google Geocoding API] Resolved ({lat:.6f}, {lon:.6f}) for '{addr or 'Google Map Link'}' via Geocoding API")
+                return GeolocationResult(
+                    latitude=lat,
+                    longitude=lon,
+                    address=addr,
+                    source="google_geocoding_api",
+                    confidence=1.0,
+                    raw_match=gm_url
+                )
+
+            # Query candidate 3: Surrounding address / plus code from slide
+            if surrounding_addr:
+                res = cls._call_google_geocoding_api({"address": surrounding_addr}, api_key)
+                if res:
+                    lat = float(res["geometry"]["location"]["lat"])
+                    lon = float(res["geometry"]["location"]["lng"])
+                    addr = place_name or res.get("formatted_address") or surrounding_addr
+                    print(f"📍 [Google Geocoding API] Resolved ({lat:.6f}, {lon:.6f}) for '{addr}' via Geocoding API")
+                    return GeolocationResult(
+                        latitude=lat,
+                        longitude=lon,
+                        address=addr,
+                        source="google_geocoding_api",
+                        confidence=1.0,
+                        raw_match=gm_url
+                    )
+
+        # Fallback if Google Geocoding API key is missing or offline:
+        if url_coords:
+            return GeolocationResult(
+                latitude=url_coords[0],
+                longitude=url_coords[1],
+                address=place_name or surrounding_addr,
+                source="google_maps_url_fallback",
+                confidence=0.95,
+                raw_match=gm_url
+            )
 
         return None
 
@@ -212,7 +449,8 @@ class GeolocationResolver:
         try:
             import urllib.request
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"})
-            with urllib.request.urlopen(req, timeout=timeout) as resp:
+            ctx = cls._get_ssl_context()
+            with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
                 return resp.geturl()
         except Exception:
             return None
@@ -344,6 +582,25 @@ class GeolocationResolver:
                 confidence=0.95,
                 raw_match=sec_m.group(0)
             )
+
+        # General decimal coordinate pair (e.g. "Sagaing General Hospital, Sagaing 21.87314, 95.97550" or "13.728076, 100.580580")
+        pair_m = re.search(
+            r'(?<![\w/@&?=])([+-]?\d{1,2}\.\d{3,8})\s*,\s*([+-]?\d{1,3}\.\d{3,8})(?![\w./?&=])',
+            text
+        )
+        if pair_m:
+            lat = float(pair_m.group(1))
+            lon = float(pair_m.group(2))
+            if -90.0 <= lat <= 90.0 and -180.0 <= lon <= 180.0:
+                addr = cls._extract_line_prefix(text, pair_m.start())
+                return GeolocationResult(
+                    latitude=lat,
+                    longitude=lon,
+                    address=addr,
+                    source="text_decimal",
+                    confidence=0.95,
+                    raw_match=pair_m.group(0)
+                )
 
         return None
 

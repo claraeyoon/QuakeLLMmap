@@ -164,6 +164,26 @@ class GeminiBridge:
             return self._clean_and_parse_json(resp.text)
         return resp.text.strip()
 
+    @classmethod
+    def _get_ssl_context(cls):
+        import ssl
+        try:
+            import certifi
+            return ssl.create_default_context(cafile=certifi.where())
+        except Exception:
+            pass
+        venv_certifi = Path("server/.venv/lib")
+        if venv_certifi.exists():
+            for p in venv_certifi.glob("**/certifi/cacert.pem"):
+                try:
+                    return ssl.create_default_context(cafile=str(p))
+                except Exception:
+                    pass
+        try:
+            return ssl.create_default_context()
+        except Exception:
+            return ssl._create_unverified_context()
+
     def _call_ai_studio_rest(
         self,
         prompt: str,
@@ -210,7 +230,8 @@ class GeminiBridge:
         t0 = time.time()
 
         try:
-            with urllib.request.urlopen(req, timeout=self.timeout) as response:
+            ctx = self._get_ssl_context()
+            with urllib.request.urlopen(req, timeout=self.timeout, context=ctx) as response:
                 data = json.loads(response.read().decode("utf-8"))
         except urllib.error.HTTPError as e:
             err_body = e.read().decode("utf-8", errors="ignore")

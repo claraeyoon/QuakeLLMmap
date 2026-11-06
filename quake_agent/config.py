@@ -28,7 +28,7 @@ class EventConfig:
     magnitude: float = 7.7
     origin_time_utc: str = "2025-03-28T06:20:00Z"
     hypocenter: Dict[str, float] = field(default_factory=lambda: {"latitude": 21.95, "longitude": 96.10, "depth_km": 10.0})
-    spatial_bounds: Dict[str, float] = field(default_factory=lambda: {"min_lat": 18.0, "max_lat": 25.0, "min_lon": 93.0, "max_lon": 99.0})
+    spatial_bounds: Dict[str, float] = field(default_factory=lambda: {"min_lat": 13.0, "max_lat": 27.0, "min_lon": 91.0, "max_lon": 103.0})
     languages: List[str] = field(default_factory=lambda: ["my", "en"])
     townships: List[str] = field(default_factory=lambda: ["Mandalay", "Sagaing", "Amarapura", "Pyin Oo Lwin"])
     local_lexicon: List[str] = field(default_factory=lambda: ["ငလျင်", "ပြိုကျ", "အက်ကွဲ", "earthquake", "collapse", "rupture"])
@@ -95,6 +95,7 @@ class Settings:
     thinking_level: str = os.getenv("GEMINI_THINKING_LEVEL", "low")
     timeout_seconds: float = float(os.getenv("GEMINI_TIMEOUT", "30.0"))
     gemini_api_key: Optional[str] = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+    google_maps_api_key: Optional[str] = os.getenv("GOOGLE_MAPS_API_KEY")
     tavily_api_key: Optional[str] = os.getenv("TAVILY_API_KEY")
     data_dir: Path = Path(os.getenv("QUAKE_DATA_DIR", "./data"))
     storage_type: str = os.getenv("STORAGE_TYPE", "duckdb")  # 'duckdb' or 'sqlite'

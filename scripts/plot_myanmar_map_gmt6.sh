@@ -9,7 +9,8 @@ gmt gmtset FONT_ANNOT 12p
 DATA_DIR="../data/myanmar"
 #INPUT_FILE="./assets/records.txt"
 #INPUT_FILE="./assets/records_mmi_gemini_ai.txt"
-INPUT_FILE="${DATA_DIR}/records_mmi_gemini_ai.csv"
+#INPUT_FILE="${DATA_DIR}/records_mmi_gemini_ai.csv"
+INPUT_FILE="../data/events/us7000pn9s/agent_evaluations_batch_rrup.csv"
 #FAULT_FILE="./assets/rupture_finite_fault_myanmar.csv"
 FAULT_FILE="${DATA_DIR}/rupture_finite_fault_myanmar.csv"
 #STATION_FILE="./assets/stations.txt"
@@ -27,7 +28,8 @@ CPT_TOPO_FILE="../data/GMT_globe_mod.cpt"
 
 # ── Outputs ─────────────────────────────────────────────────────────────────
 #OUT_DIR="./assets"
-OUT_DIR="../plots/myanmar"
+#OUT_DIR="../plots/myanmar"
+OUT_DIR="../plots/agent_myanmar"
 #MAP_NAME="map_mmi_mandalay"          # gmt figure basename (no extension)
 MAP_NAME=${OUT_DIR}/map_mmi_mandalay
 
