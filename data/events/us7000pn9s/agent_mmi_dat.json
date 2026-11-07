@@ -1,0 +1,5162 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "event_id": "us7000pn9s",
+    "source": "QuakeLLMmap Agentic Reconnaissance",
+    "count": 184
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "MMI.d6a18bd5",
+      "properties": {
+        "code": "d6a18bd5",
+        "name": "Thazi, Myanmar (Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-022.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.36,
+        "building_type": "Industrial utility compound entrance with perimeter infrastructure and nearby prefabricated modular cabins."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.03527777777778,
+          20.882055555555556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.c78e534e",
+      "properties": {
+        "code": "c78e534e",
+        "name": "Sagaing city",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.39,
+        "intensity_flag": "0",
+        "file_name": "page-026.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.02,
+        "building_type": "Multi-story commercial and mixed-use urban buildings; reinforced concrete frames with masonry infill and unreinforced masonry structures."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.98488055555556,
+          21.880352777777777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.1c53fecf",
+      "properties": {
+        "code": "1c53fecf",
+        "name": "Sagaing city",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-027.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.02,
+        "building_type": "Low-rise urban commercial and residential buildings"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.98488055555556,
+          21.880352777777777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.a422111f",
+      "properties": {
+        "code": "a422111f",
+        "name": "Sagaing city",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-028.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.02,
+        "building_type": "Ordinary urban residential and commercial structures, likely unreinforced masonry or non-ductile concrete frame buildings."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.98488055555556,
+          21.880352777777777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.2d5b88ce",
+      "properties": {
+        "code": "2d5b88ce",
+        "name": "22.0456029, 96.0393802 OR \u201cnear Yega In\u201d which is",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-029.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.26,
+        "building_type": "Open field / agricultural area; no direct building structures present in the immediate rupture zone."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.98277777777778,
+          21.97472222222222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.b5990b0c",
+      "properties": {
+        "code": "b5990b0c",
+        "name": "Sagaing township, no exact location, likely near",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-030.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.02,
+        "building_type": "Civil/transportation infrastructure (asphalt paved roadway, pedestrian walkway, and metal guardrail)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.985093,
+          21.87295
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.0b9bd79e",
+      "properties": {
+        "code": "0b9bd79e",
+        "name": "Sagaing township",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.84,
+        "intensity_flag": "0",
+        "file_name": "page-031.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 1821.95,
+        "building_type": "Multi-story mixed timber frame and unreinforced/ordinary masonry structures alongside urban roadway infrastructure."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.98488055555556,
+          1.8803527777777778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.f612a53b",
+      "properties": {
+        "code": "f612a53b",
+        "name": "Heung Min Son @heungburma",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-032.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.03,
+        "building_type": "Linear transportation infrastructure (multi-lane paved highway and roadside shoulders)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.984709,
+          21.882222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.19ad9a78",
+      "properties": {
+        "code": "19ad9a78",
+        "name": "Sagaing Township, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-033.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.56,
+        "building_type": "Paved infrastructure (asphalt road) and lightweight rural roadside wooden shed/shelter."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9797,
+          21.8787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.4a24c5ae",
+      "properties": {
+        "code": "4a24c5ae",
+        "name": "Satetaya Village in Plague city, Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-034.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 10.84,
+        "building_type": "Low-rise residential and utility structures; mix of unreinforced brick masonry and timber-framed structures."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.089906,
+          21.890191
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.08dd95ef",
+      "properties": {
+        "code": "08dd95ef",
+        "name": "Sittara village, Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-035.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 5.45,
+        "building_type": "Masonry boundary/retaining walls and adjacent residential/ordinary structures."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.03950525100306,
+          21.838393446604453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.7d93ea40",
+      "properties": {
+        "code": "7d93ea40",
+        "name": "Thayetpin, Nay Pyi Taw",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-036.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.11,
+        "building_type": "Paved infrastructure (rural concrete pathway/roadway) and surrounding agricultural boundary."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.17902777777778,
+          19.684638888888887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.290f56db",
+      "properties": {
+        "code": "290f56db",
+        "name": "Satellite imagery from Maxar Technologies, reported by CNN",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-038.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 7.93,
+        "building_type": "Dense informal and low-rise residential settlement, non-engineered or semi-engineered masonry, wood, and tin-roofed housing."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.06145555555555,
+          21.956169444444445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.a98434de",
+      "properties": {
+        "code": "a98434de",
+        "name": "96\u00b0 3'41.24\"E (general area of fire",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 6.5,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-039.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 7.93,
+        "building_type": "Multi-story commercial and residential structures, roadside utility infrastructure."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.06145555555555,
+          21.956169444444445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.3cc9034a",
+      "properties": {
+        "code": "3cc9034a",
+        "name": "On ground video of settlement with apparent fire following earthquake from Thu Thu Aung",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-040.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 7.93,
+        "building_type": "Dense informal and non-engineered residential settlement buildings."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.06145555555555,
+          21.956169444444445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.f0fa3b30",
+      "properties": {
+        "code": "f0fa3b30",
+        "name": "On ground video of settlement with fire following earthquake from TM Media on YouTube",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 6.5,
+        "intensity_stddev": 0.59,
+        "intensity_flag": "0",
+        "file_name": "page-041.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 7.93,
+        "building_type": "Low-rise residential and dense informal settlement structures."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.06145555555555,
+          21.956169444444445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.4e6be701",
+      "properties": {
+        "code": "4e6be701",
+        "name": "Mandalay University, Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-042.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 11.31,
+        "building_type": "Institutional/academic facility; multi-story reinforced concrete frame structure with masonry infill."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.09434444444445,
+          21.956952777777776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.b859439d",
+      "properties": {
+        "code": "b859439d",
+        "name": "Sagaing city",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-044.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.01,
+        "building_type": "Low-rise to multi-story residential structures, vernacular housing, and mixed commercial/residential units."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.98494166666667,
+          21.88088611111111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.cc5bac4a",
+      "properties": {
+        "code": "cc5bac4a",
+        "name": "Amarapura, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-045.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 6.46,
+        "building_type": "Single-story unreinforced masonry (URM) structure / residential or light commercial."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.0469,
+          21.9028
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.b6d8df82",
+      "properties": {
+        "code": "b6d8df82",
+        "name": "Mandalay, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-046.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 10.06,
+        "building_type": "Multi-story reinforced concrete (RC) framed building with masonry infill."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.083,
+          21.975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.e026cd5c",
+      "properties": {
+        "code": "e026cd5c",
+        "name": "Facebook Pyinmana Update News Page",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-047.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 4.22,
+        "building_type": "Single-family residential buildings; timber/frame with brick-nogging/masonry infilled walls."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.21157,
+          19.73814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.0e9c640b",
+      "properties": {
+        "code": "0e9c640b",
+        "name": "Tada-U, Kyaukse District, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-048.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 1.41,
+        "building_type": "Low-rise residential and commercial structures, including reinforced concrete (RC) frames with unreinforced masonry/brick nogging infill."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.973611,
+          21.818889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.da03ad0a",
+      "properties": {
+        "code": "da03ad0a",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.3,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-049.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 22.43,
+        "building_type": "Two-story framed structure with brick nogging / masonry infill panels"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.613359,
+          18.156258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.ff69083f",
+      "properties": {
+        "code": "ff69083f",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-050.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 86.86,
+        "building_type": "Elevated wooden stilt houses / timber-framed pile dwellings"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.915449,
+          20.551299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.15a14de4",
+      "properties": {
+        "code": "15a14de4",
+        "name": "Phyu Township, Taungoo District, Bago Region, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-051.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 13.14,
+        "building_type": "Multi-story reinforced concrete frame structures with masonry infill, mixed commercial/residential strip buildings, and unreinforced brick perimeter walls."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.4361,
+          18.9056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.feebd50b",
+      "properties": {
+        "code": "feebd50b",
+        "name": "Chatuchak Building, Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.66,
+        "intensity_flag": "0",
+        "file_name": "page-053.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 652.82,
+        "building_type": "Multi-story reinforced concrete frame building under construction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.547,
+          13.802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.890bb209",
+      "properties": {
+        "code": "890bb209",
+        "name": "Thailand, Bangkok, Chatuchak Building, Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.66,
+        "intensity_flag": "0",
+        "file_name": "page-054.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 652.82,
+        "building_type": "Multi-story high-rise frame under construction (engineered frame structure)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.547,
+          13.802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.dc0adef6",
+      "properties": {
+        "code": "dc0adef6",
+        "name": "Chatuchak Building, Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.7,
+        "intensity_flag": "0",
+        "file_name": "page-055.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 652.82,
+        "building_type": "Multi-story reinforced concrete high-rise frame structure under construction (~30 stories)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.547,
+          13.802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.385826d4",
+      "properties": {
+        "code": "385826d4",
+        "name": "High-rise condominium buildings in Bangkok, Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 5.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-056.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 661.28,
+        "building_type": "Modern engineered high-rise condominium towers"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.585,
+          13.732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.164bef9c",
+      "properties": {
+        "code": "164bef9c",
+        "name": "High-rise condominium buildings in Bangkok, Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 5.5,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-057.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 661.28,
+        "building_type": "Modern reinforced concrete multi-story high-rise condominium towers"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.585,
+          13.732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.f1392dba",
+      "properties": {
+        "code": "f1392dba",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 6.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-058.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 661.28,
+        "building_type": "Reinforced concrete high-rise residential/condominium towers with linking skybridge structures."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.585,
+          13.732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.b42e2538",
+      "properties": {
+        "code": "b42e2538",
+        "name": "Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.39,
+        "intensity_flag": "0",
+        "file_name": "page-059.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 13.5,
+        "building_type": "Multi-story residential condominium complex / medium- to high-rise frame structures"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.11598888888888,
+          21.985677777777777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.eaf448d9",
+      "properties": {
+        "code": "eaf448d9",
+        "name": "Sky Villa",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.2,
+        "intensity_stddev": 0.41,
+        "intensity_flag": "0",
+        "file_name": "page-060.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 13.51,
+        "building_type": "Multi-story reinforced concrete frame condominium / mixed-use building (11 stories)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.11611909999999,
+          21.9857396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.31b30aa6",
+      "properties": {
+        "code": "31b30aa6",
+        "name": "Sky Villa Condo (Mandalay), Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.43,
+        "intensity_flag": "0",
+        "file_name": "page-061.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 13.28,
+        "building_type": "Multi-story reinforced concrete moment-resisting frame structure with open ground-floor soft-story irregularity (commercial/parking)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.1139,
+          21.9855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.d705c615",
+      "properties": {
+        "code": "d705c615",
+        "name": "Sky Villa",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-062.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 13.51,
+        "building_type": "Multi-story reinforced concrete frame building with masonry infill (Condominium / Residential)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.11611909999999,
+          21.9857396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.34cd631c",
+      "properties": {
+        "code": "34cd631c",
+        "name": "Sky Villa Condo (Mandalay), Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-063.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 13.28,
+        "building_type": "Multi-story reinforced concrete frame residential condominium buildings."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.1139,
+          21.9855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.2dbecb0c",
+      "properties": {
+        "code": "2dbecb0c",
+        "name": "Sky Villa",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-064.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 13.51,
+        "building_type": "Multi-story residential apartment/condominium building (engineered frame structure)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.11611909999999,
+          21.9857396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.7efc54db",
+      "properties": {
+        "code": "7efc54db",
+        "name": "Sky Villa",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.43,
+        "intensity_flag": "0",
+        "file_name": "page-065.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 13.51,
+        "building_type": "Multi-story engineered reinforced concrete frame building (condominium/residential high-rise)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.11611909999999,
+          21.9857396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.6128956b",
+      "properties": {
+        "code": "6128956b",
+        "name": "Mandalay, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-066.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 10.76,
+        "building_type": "Multi-story commercial/residential framed structure and adjacent low-to-mid-rise masonry/concrete buildings."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.0891,
+          21.9588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.47db3b6d",
+      "properties": {
+        "code": "47db3b6d",
+        "name": "Mandalay, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-067.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 10.76,
+        "building_type": "Multi-story residential/commercial structure"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.0891,
+          21.9588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.577a54f5",
+      "properties": {
+        "code": "577a54f5",
+        "name": "Hnin Si Condominium, Mandalay. Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.8,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-068.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 10.99,
+        "building_type": "Multi-story reinforced concrete framed residential/commercial high-rise building with masonry infill walls."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.092,
+          21.978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.4b658f0d",
+      "properties": {
+        "code": "4b658f0d",
+        "name": "same complex (see next slides), possible coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-069.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 8.64,
+        "building_type": "Multi-story residential apartment/civil service quarters"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.08175,
+          19.76651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.c8a9a2e4",
+      "properties": {
+        "code": "c8a9a2e4",
+        "name": "Facebook (Wathan Aung",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-070.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 8.64,
+        "building_type": "Multi-story (4-story) reinforced concrete residential/civil service apartment blocks with exterior balconies and access walkways/stair towers."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.08175,
+          19.76651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.1a461a67",
+      "properties": {
+        "code": "1a461a67",
+        "name": "Mandalay, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-071.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 10.76,
+        "building_type": "Multi-story reinforced concrete frame building with masonry infill walls."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.0891,
+          21.9588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.f17c7422",
+      "properties": {
+        "code": "f17c7422",
+        "name": "Sagaing, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-072.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.56,
+        "building_type": "Multi-story residential and mixed-use commercial/residential structures."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9797,
+          21.8787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.f2f4f3af",
+      "properties": {
+        "code": "f2f4f3af",
+        "name": "Sagaing, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-073.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.56,
+        "building_type": "Multi-story brick-nogging structure (framed building with unreinforced brick masonry infill)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9797,
+          21.8787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.215ce75b",
+      "properties": {
+        "code": "215ce75b",
+        "name": "Meiktila, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-074.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 17.93,
+        "building_type": "Multi-story Unreinforced Masonry (URM) structure with timber floors/roof framing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.8647,
+          20.8789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.b0eaab44",
+      "properties": {
+        "code": "b0eaab44",
+        "name": "KBZ Bank branch at Pyawbwe",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-076.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 1.27,
+        "building_type": "Multi-story commercial reinforced concrete frame building with masonry infill"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.05242,
+          20.589678
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.f19f66e9",
+      "properties": {
+        "code": "f19f66e9",
+        "name": "Myanmar Citizen Bank (MCB), Mandalay, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-077.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 9.26,
+        "building_type": "Multi-story reinforced concrete (RC) moment frame commercial building with masonry infill."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.07498,
+          21.98387
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.645f218e",
+      "properties": {
+        "code": "645f218e",
+        "name": "UAB, United Amara Bank, Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-078.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 10.56,
+        "building_type": "Multi-story commercial reinforced concrete (RC) frame building with soft ground story and modern facade cladding."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.08634,
+          22.00409
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.015f4842",
+      "properties": {
+        "code": "015f4842",
+        "name": "Facebook Kwee Linn",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-079.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 8.41,
+        "building_type": "Multi-story commercial structure (Reinforced concrete frame with unreinforced masonry infill walls)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.20108,
+          20.13202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.a3604695",
+      "properties": {
+        "code": "a3604695",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-080.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 8.32,
+        "building_type": "Multi-story commercial building (reinforced concrete frame with unreinforced masonry infill and composite cladding)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.19993,
+          20.13393
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.d1384378",
+      "properties": {
+        "code": "d1384378",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-081.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 5.26,
+        "building_type": "Commercial market stalls and entrance gate structures; reinforced concrete frame with unreinforced or confined masonry infill, along with light-gauge steel/corrugated roof framing."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.11874,
+          19.73909
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.6d46ca58",
+      "properties": {
+        "code": "6d46ca58",
+        "name": "MJ5M+9X5, Aungpan (",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.8,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-082.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 59.0,
+        "building_type": "Multi-story reinforced concrete frame building with masonry infill (commercial/hotel structure)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.632617,
+          20.6579443
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.d925ac48",
+      "properties": {
+        "code": "d925ac48",
+        "name": "Google Maps (before) and Na/Ku (Aungban), published by The",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-083.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 58.94,
+        "building_type": "Multi-story commercial hotel building (approx. 5 to 6 stories) with reinforced concrete moment-resisting frame and masonry infill walls."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.632,
+          20.658
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.6e2ea327",
+      "properties": {
+        "code": "6e2ea327",
+        "name": "Shan State, Aungpan 11221",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.39,
+        "intensity_flag": "0",
+        "file_name": "page-084.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 59.05,
+        "building_type": "Multi-story commercial hotel building (reinforced concrete frame with masonry infill)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.63293,
+          20.65952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.51646c01",
+      "properties": {
+        "code": "51646c01",
+        "name": "Great Wall Hotel, Mandalay, Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-085.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 10.66,
+        "building_type": "Multi-story reinforced concrete frame structure with glass curtain wall facade segments."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.088,
+          21.955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.91066106",
+      "properties": {
+        "code": "91066106",
+        "name": "Hotel Ye Myanmar, Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-086.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 12.01,
+        "building_type": "Multi-story engineered commercial structure (hotel) with reinforced concrete frame and masonry infill."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.101,
+          21.954
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.e3879315",
+      "properties": {
+        "code": "e3879315",
+        "name": "Sagaing city",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.52,
+        "intensity_flag": "0",
+        "file_name": "page-088.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.07,
+        "building_type": "Reinforced concrete/steel-framed industrial warehouse with lightweight corrugated metal ancillary structures."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9843147,
+          21.880548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.dc4ab477",
+      "properties": {
+        "code": "dc4ab477",
+        "name": "Sagaing city",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-089.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.12,
+        "building_type": "Multi-story reinforced concrete frame structures with unreinforced masonry (brick) infill walls, and low-rise masonry commercial/residential buildings."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.983927,
+          21.880359
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.7be45325",
+      "properties": {
+        "code": "7be45325",
+        "name": "Sagaing city",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-090.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.23,
+        "building_type": "Low-rise unreinforced or minimally reinforced masonry (URM) commercial and residential buildings with concrete frames/infill."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9828033,
+          21.8800527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.087233d6",
+      "properties": {
+        "code": "087233d6",
+        "name": "Sagaing city",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 6.5,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-091.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.26,
+        "building_type": "Mixed traditional timber-frame with unreinforced masonry (URM) infill / shopfront commercial-residential building."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9825833,
+          21.8799258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.b954180a",
+      "properties": {
+        "code": "b954180a",
+        "name": "Sagaing city",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-092.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.24,
+        "building_type": "Low-rise unreinforced brick masonry commercial structure"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.982742,
+          21.880128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.a28f7996",
+      "properties": {
+        "code": "a28f7996",
+        "name": "Sagaing city",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-093.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.38,
+        "building_type": "Reinforced concrete frame commercial building (C1/RC moment frame)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.981388,
+          21.880058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.3d9c40bc",
+      "properties": {
+        "code": "3d9c40bc",
+        "name": "Sagaing city",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-094.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.34,
+        "building_type": "Multi-story commercial and mixed-use reinforced concrete frame buildings with masonry infill."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.981716,
+          21.880251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.7ef4586f",
+      "properties": {
+        "code": "7ef4586f",
+        "name": "Sagaing city",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-095.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.35,
+        "building_type": "Multi-story commercial and mixed-use residential/commercial buildings with soft-story ground levels."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.981671,
+          21.880692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.8e9ed210",
+      "properties": {
+        "code": "8e9ed210",
+        "name": "Pyinmana township, Naypyidaw region, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-096.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 4.7,
+        "building_type": "Multistory commercial and residential frame buildings, mixed reinforced concrete and masonry structures, and light accessory metal structures."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.2164,
+          19.7375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.fc4365a0",
+      "properties": {
+        "code": "fc4365a0",
+        "name": "Mahaaungmyae Township, Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.39,
+        "intensity_flag": "0",
+        "file_name": "page-097.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 9.62,
+        "building_type": "Multi-story reinforced concrete frame structure with masonry infill (hotel and adjacent multi-story commercial/residential building)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.078014,
+          21.95997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.cfb1c3c6",
+      "properties": {
+        "code": "cfb1c3c6",
+        "name": "Shwe Kyi Moe Cafe",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-098.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 9.8,
+        "building_type": "Multi-story commercial reinforced concrete (RC) frame building with masonry infill"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.079856,
+          21.96155
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.33df2182",
+      "properties": {
+        "code": "33df2182",
+        "name": "Tain Phyu Hotel (Silver Cloud), 73rd St Street, 29th St, Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-099.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 11.37,
+        "building_type": "Multi-story reinforced concrete frame building (commercial/hotel structure with variable story heights and soft-story configuration)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.09572,
+          21.97782
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.cfb285eb",
+      "properties": {
+        "code": "cfb285eb",
+        "name": "Corner of 73x37 Street, Mandalay, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-100.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 11.3,
+        "building_type": "Multi-story commercial reinforced concrete frame with masonry infill (approx. 4-5 stories)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.09465,
+          21.965558333333334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.4f11a45e",
+      "properties": {
+        "code": "4f11a45e",
+        "name": "Myintsone Hotel, Mandalay, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-101.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 13.16,
+        "building_type": "Multi-story reinforced concrete (RC) moment-resisting frame commercial/hotel structure with masonry infill."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.11298,
+          21.98089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.dadd712c",
+      "properties": {
+        "code": "dadd712c",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.43,
+        "intensity_flag": "0",
+        "file_name": "page-102.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 1.45,
+        "building_type": "Multi-story reinforced concrete (RC) moment frame building with masonry infill"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.97313,
+          21.82183
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.8cbb9ed1",
+      "properties": {
+        "code": "8cbb9ed1",
+        "name": "26 Leo Hotel, Mandalay, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-103.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 1.45,
+        "building_type": "Multi-story commercial reinforced concrete frame with masonry infill (soft-story ground level)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.97313,
+          21.82183
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.d2f40558",
+      "properties": {
+        "code": "d2f40558",
+        "name": "Jade City Hotel, Naypyidaw, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-104.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.04,
+        "building_type": "Multi-story reinforced concrete hotel with attached entrance wing/rotunda."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.15184,
+          19.88025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.30cfe24f",
+      "properties": {
+        "code": "30cfe24f",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-105.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.71,
+        "building_type": "Two-story engineered steel-frame commercial structure"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.15132,
+          19.81816
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.40b689fa",
+      "properties": {
+        "code": "40b689fa",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-106.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 11.21,
+        "building_type": "Commercial multi-story reinforced concrete (RC) frame building with masonry infill walls."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.09274,
+          21.94162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.efcee31c",
+      "properties": {
+        "code": "efcee31c",
+        "name": "Facebook Kaung Htet Paing Oo",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-107.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 6.42,
+        "building_type": "Large commercial retail supercenter with structural steel/reinforced frame and secondary facade framing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.11088,
+          19.71466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.2ace2ed1",
+      "properties": {
+        "code": "2ace2ed1",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-108.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.2,
+        "building_type": "Multi-story engineered frame structure (approx. 10 stories)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.156029,
+          19.820116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.3e946263",
+      "properties": {
+        "code": "3e946263",
+        "name": "Facebook Kaung Htet Paing Oo",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-109.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.76,
+        "building_type": "Two-story commercial reinforced concrete frame with masonry infill (soft-story design)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.151168,
+          19.816302
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.2dc84aec",
+      "properties": {
+        "code": "2dc84aec",
+        "name": "Ritz Grand Hotel, Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-110.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 13.33,
+        "building_type": "Multi-story reinforced concrete frame building with masonry infill (commercial hotel)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.1138860865531,
+          21.95485609100904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.fe6da1c2",
+      "properties": {
+        "code": "fe6da1c2",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-111.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 13.16,
+        "building_type": "Multi-story commercial/hotel building (reinforced concrete frame with masonry infill walls, under renovation)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.11298,
+          21.98089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.641c5ac9",
+      "properties": {
+        "code": "641c5ac9",
+        "name": "Thailand, Bangkok",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 5.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-112.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 661.32,
+        "building_type": "High-rise engineered building (28-story reinforced concrete frame structure)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.58058,
+          13.728076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.69c54427",
+      "properties": {
+        "code": "69c54427",
+        "name": "Thailand, Bangkok",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 5.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-113.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 661.32,
+        "building_type": "Modern multi-story/high-rise residential condominium and reinforced concrete parking structure."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.58058,
+          13.728076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.8d80a1b1",
+      "properties": {
+        "code": "8d80a1b1",
+        "name": "Ward (",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-115.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 14.39,
+        "building_type": "Reinforced concrete (RC) frame building with masonry infill (preschool/school structure)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.12934,
+          21.60193
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.be197bfa",
+      "properties": {
+        "code": "be197bfa",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-116.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.5,
+        "building_type": "Educational institutions (high schools) and surrounding suburban/urban infrastructure."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.980284,
+          21.878951
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.3a3d17b3",
+      "properties": {
+        "code": "3a3d17b3",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-117.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.5,
+        "building_type": "Educational facility / institutional laboratory building."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.980284,
+          21.878951
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.2eea74d6",
+      "properties": {
+        "code": "2eea74d6",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-118.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.16,
+        "building_type": "Educational institution compound consisting of multi-wing school pavilions and outbuildings."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9835,
+          21.8797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.d9cbe264",
+      "properties": {
+        "code": "d9cbe264",
+        "name": "Mandalay University",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.52,
+        "intensity_flag": "0",
+        "file_name": "page-119.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 11.36,
+        "building_type": "Institutional / educational facility"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.0948,
+          21.9564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.e61da299",
+      "properties": {
+        "code": "e61da299",
+        "name": "University of Mandalay, Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-120.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 11.36,
+        "building_type": "Multi-story monumental academic building (institutional / classical architecture)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.0948,
+          21.9564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.7bd50197",
+      "properties": {
+        "code": "7bd50197",
+        "name": "University of Mandalay, Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-121.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 11.36,
+        "building_type": "Multi-story institutional/academic building, ordinary reinforced concrete frame with unreinforced/infill masonry walls."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.0948,
+          21.9564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.18a38779",
+      "properties": {
+        "code": "18a38779",
+        "name": "Facebook Baby World Private School Page",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-122.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 6.51,
+        "building_type": "Multi-story reinforced concrete frame structure with unreinforced masonry infill (educational/commercial facility)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.04731,
+          21.90512
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.eda1e2f8",
+      "properties": {
+        "code": "eda1e2f8",
+        "name": "Chin Su Ward, Sagaing city, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-123.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.56,
+        "building_type": "Multi-story reinforced concrete frame building with masonry infill (educational facility / school structure)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9797,
+          21.8787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.36c8b58f",
+      "properties": {
+        "code": "36c8b58f",
+        "name": "Zaykwat Thit Ward, Paleik, Mandalay Region, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.2,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-124.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.49,
+        "building_type": "Multi-story reinforced concrete (RC) frame building (educational facility)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9922,
+          21.8025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.90def2e7",
+      "properties": {
+        "code": "90def2e7",
+        "name": "Facebook Posted at Facebook Group of TU and CU\u2019s Student",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-125.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 14.04,
+        "building_type": "Multi-story reinforced concrete frame academic/institutional building with masonry infill."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.12592,
+          21.60465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.aec64536",
+      "properties": {
+        "code": "aec64536",
+        "name": "Technological University Sagaing, Sagaing, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-126.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 3.02,
+        "building_type": "Multi-story institutional/university building (reinforced concrete frame with unreinforced/partially reinforced masonry infill)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.954212,
+          21.923161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.0c9a7fce",
+      "properties": {
+        "code": "0c9a7fce",
+        "name": "Shwe Win Women\u2019s Dormitory (\u1021\u1019\u103b\u102d\u102f\u1038\u101e\u1019\u102e\u1038\u1006\u1031\u102c\u1004\u103a), 38 St. 72x73 St. Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-127.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 11.48,
+        "building_type": "Multi-story reinforced concrete frame commercial/residential building (dormitory) with soft-story ground floor configuration."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.09627638299033,
+          21.96414143743887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.dc064494",
+      "properties": {
+        "code": "dc064494",
+        "name": "Mandalay General Hospital",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 6.0,
+        "intensity_stddev": 0.59,
+        "intensity_flag": "0",
+        "file_name": "page-129.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 10.82,
+        "building_type": "Multi-story institutional/hospital complex"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.09038333333334,
+          21.97743611111111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.fc197cb8",
+      "properties": {
+        "code": "fc197cb8",
+        "name": "Naypyidaw",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-130.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.4,
+        "building_type": "Engineered multi-story healthcare building (100-bed hospital facility)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.15725555555557,
+          19.84723888888889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.edc42a9f",
+      "properties": {
+        "code": "edc42a9f",
+        "name": "Ottara Thiri Private Hospital",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.43,
+        "intensity_flag": "0",
+        "file_name": "page-132.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.31,
+        "building_type": "Multi-story commercial/healthcare facility (Reinforced Concrete Frame with infill masonry)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.156472,
+          19.84679
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.0d2ebcc1",
+      "properties": {
+        "code": "0d2ebcc1",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.41,
+        "intensity_flag": "0",
+        "file_name": "page-133.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.34,
+        "building_type": "Substantial engineered commercial/hospital facility (multi-story reinforced concrete/frame structure)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.15651,
+          19.84786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.1a1e288f",
+      "properties": {
+        "code": "1a1e288f",
+        "name": "Ottara Thiri Private Hospital, Naypyidaw, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-134.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.4,
+        "building_type": "Multi-story commercial/institutional healthcare facility (reinforced concrete frame with masonry infill)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.15725555555557,
+          19.84723888888889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.74481bf2",
+      "properties": {
+        "code": "74481bf2",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.43,
+        "intensity_flag": "0",
+        "file_name": "page-135.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.4,
+        "building_type": "Reinforced concrete (RC) frame structure with unreinforced masonry (URM) infill walls and attached external portico/canopy."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.15725555555557,
+          19.84723888888889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.5ab9a1ba",
+      "properties": {
+        "code": "5ab9a1ba",
+        "name": "Sagaing General Hospital",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 6.0,
+        "intensity_stddev": 0.52,
+        "intensity_flag": "0",
+        "file_name": "page-136.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 1.01,
+        "building_type": "Healthcare/hospital facility (engineered reinforced concrete / masonry infill)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9755,
+          21.87314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.0a05dce8",
+      "properties": {
+        "code": "0a05dce8",
+        "name": "Sagaing General Hospital, Sagaing",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 6.0,
+        "intensity_stddev": 0.52,
+        "intensity_flag": "0",
+        "file_name": "page-137.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 1.01,
+        "building_type": "Engineered multistory healthcare facility / institutional building"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9755,
+          21.87314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.b80d7d0d",
+      "properties": {
+        "code": "b80d7d0d",
+        "name": "Sagaing General Hospital",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 5.5,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-138.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 1.01,
+        "building_type": "Hospital complex / Engineered institutional reinforced concrete frame with masonry infill"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9755,
+          21.87314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.2fb77fe5",
+      "properties": {
+        "code": "2fb77fe5",
+        "name": "(Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 6.5,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-139.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 1.84,
+        "building_type": "1-story reinforced concrete frame structure with decorative masonry lattice/breeze-block walls and entrance porch"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.001606,
+          21.915215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.b6b9fe52",
+      "properties": {
+        "code": "b6b9fe52",
+        "name": "Facebook Sai Aung Main/AFP (Left Photo), Facebook Ko Kyi Kyaw (Right",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-140.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 6.76,
+        "building_type": "Public hospital complex; multi-story reinforced concrete frame structure with attached porticos and covered entrance driveways."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.10324,
+          19.74473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.2beb1150",
+      "properties": {
+        "code": "2beb1150",
+        "name": "Naypyidaw General Hospital",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-141.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 6.76,
+        "building_type": "Hospital / institutional building with reinforced concrete frame and cantilevered/portico entrance canopy."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.10324,
+          19.74473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.a53a13f5",
+      "properties": {
+        "code": "a53a13f5",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-142.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 6.76,
+        "building_type": "Reinforced concrete frame hospital building with an attached RC framed porte-coch\u00e8re/canopy entrance structure."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.10324,
+          19.74473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.c427ce0f",
+      "properties": {
+        "code": "c427ce0f",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-143.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 6.76,
+        "building_type": "Reinforced concrete framed hospital facility with a projected entrance canopy/portico structure."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.10324,
+          19.74473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.441145c0",
+      "properties": {
+        "code": "441145c0",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-144.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 6.76,
+        "building_type": "Public healthcare facility / Hospital complex with reinforced concrete frame and attached canopy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.10324,
+          19.74473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.b40306c5",
+      "properties": {
+        "code": "b40306c5",
+        "name": "(Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 4.5,
+        "intensity_stddev": 0.52,
+        "intensity_flag": "0",
+        "file_name": "page-145.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 654.87,
+        "building_type": "Multi-story medical and healthcare facility complex."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.534365,
+          13.767729
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.0b4fe6a3",
+      "properties": {
+        "code": "0b4fe6a3",
+        "name": "(Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 5.5,
+        "intensity_stddev": 0.52,
+        "intensity_flag": "0",
+        "file_name": "page-146.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 655.31,
+        "building_type": "Reinforced concrete multi-story hospital complex and wide-span gymnasium facility."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.536826,
+          13.76451
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.63318f7e",
+      "properties": {
+        "code": "63318f7e",
+        "name": "Sagaing Township Fire Station, Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-148.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.29,
+        "building_type": "Two-story reinforced concrete frame building with open ground-floor bays (soft story) and masonry infill walls."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.98793,
+          21.87885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.53d174d2",
+      "properties": {
+        "code": "53d174d2",
+        "name": "Sagaing Township Fire Station, Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-149.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.29,
+        "building_type": "Reinforced concrete frame with masonry infill (soft-story open garage ground floor)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.98793,
+          21.87885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.639cf073",
+      "properties": {
+        "code": "639cf073",
+        "name": "Mahamuni Pagoda, Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-151.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 9.7,
+        "building_type": "Monumental religious complex (pagoda, pavilions, multi-tiered shrines) and dense urban residential/commercial structures (multi-story buildings)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.07846,
+          21.95199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.60661483",
+      "properties": {
+        "code": "60661483",
+        "name": "Mahamuni Pagoda",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-152.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 9.7,
+        "building_type": "Religious structure / traditional temple pavilion with multi-tiered pyatthat roof tower."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.07846,
+          21.95199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.1df6427a",
+      "properties": {
+        "code": "1df6427a",
+        "name": "Facebook Living Myanmar Media Group",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-153.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 9.7,
+        "building_type": "Unreinforced masonry (URM) historic/traditional religious and administrative compound buildings, accompanied by light-gauge framed structures with corrugated sheet roofing."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.07846,
+          21.95199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.7b7b85fe",
+      "properties": {
+        "code": "7b7b85fe",
+        "name": "Mahamuni Buddha Temple in Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-154.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 9.7,
+        "building_type": "Traditional religious complex comprising masonry pavilions, arched gateways, corridors, tiered spires/pagodas, and multi-tiered timber/metal ornamental roof structures."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.07846,
+          21.95199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.d07e0327",
+      "properties": {
+        "code": "d07e0327",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-155.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 6.9,
+        "building_type": "Historic unreinforced masonry monument / pagoda temple"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.051139,
+          21.904417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.eaafa845",
+      "properties": {
+        "code": "eaafa845",
+        "name": "Ananda Pagoda, Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.52,
+        "intensity_flag": "0",
+        "file_name": "page-156.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 9.91,
+        "building_type": "Historic cultural pagoda / religious complex"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.08049,
+          21.95
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.cc23e0d0",
+      "properties": {
+        "code": "cc23e0d0",
+        "name": "Ananda Pagoda, Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-157.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 9.91,
+        "building_type": "Historical religious structure / unreinforced masonry pagoda entrance archway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.08049,
+          21.95
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.ff3dae4d",
+      "properties": {
+        "code": "ff3dae4d",
+        "name": "West of Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-158.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 8.43,
+        "building_type": "Multi-story reinforced concrete frame buildings with masonry infill (monks' residential quarters)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.066689,
+          21.964477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.0596c017",
+      "properties": {
+        "code": "0596c017",
+        "name": "West of Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-159.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 8.43,
+        "building_type": "Multi-story reinforced concrete moment-frame structure (monastery residential quarters) and unreinforced/confined masonry decorative tower."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.066689,
+          21.964477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.7c7a973e",
+      "properties": {
+        "code": "7c7a973e",
+        "name": "West of Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-160.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 8.43,
+        "building_type": "Multi-story reinforced concrete (RC) moment frame building with masonry infill."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.066689,
+          21.964477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.813517ff",
+      "properties": {
+        "code": "813517ff",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-161.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 3.47,
+        "building_type": "Multi-story reinforced concrete (RC) frame building with masonry infill (Golden Jubilee Hall monastery facility)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.01598,
+          22.02631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.8b52a84e",
+      "properties": {
+        "code": "8b52a84e",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.39,
+        "intensity_flag": "0",
+        "file_name": "page-162.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 3.47,
+        "building_type": "Multi-story reinforced concrete (RC) frame building with masonry infill panels"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.01598,
+          22.02631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.695c9059",
+      "properties": {
+        "code": "695c9059",
+        "name": "Sagaing city",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-163.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.38,
+        "building_type": "Traditional religious/cultural structures (stupas/shrines) and unreinforced masonry perimeter/enclosure walls."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.98893333333334,
+          21.876116666666668
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.8a8cbee0",
+      "properties": {
+        "code": "8a8cbee0",
+        "name": "Kyaukse",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-164.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 15.02,
+        "building_type": "Religious structure / unreinforced stone masonry church building with timber roof framing."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.135406,
+          21.603348
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.a698fd35",
+      "properties": {
+        "code": "a698fd35",
+        "name": "Thone Pan Hla, Pyay (",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-165.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 102.9,
+        "building_type": "Historical / ancient unreinforced masonry monastery building (Class D masonry)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.31611111111111,
+          18.78666666666667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.35ca9760",
+      "properties": {
+        "code": "35ca9760",
+        "name": "Myat Saw Nyi Naung, Taungoo, Bago region",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 6.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-166.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 20.92,
+        "building_type": "Religious masonry stupa/pagoda with ornamental metalwork finial (Hti)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.51083333333334,
+          18.915277777777778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.75c8de09",
+      "properties": {
+        "code": "75c8de09",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-167.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.03,
+        "building_type": "Historical religious masonry monument (stupa/pagoda) and associated ancillary entrance structures."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.984632,
+          21.884005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.fffa722a",
+      "properties": {
+        "code": "fffa722a",
+        "name": "Kandaw Mosque, Taungoo, Bago region (",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-168.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 12.57,
+        "building_type": "Religious assembly building / ordinary masonry/RC structure with lightweight truss and corrugated metal roofing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.42500000000001,
+          18.935277777777777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.3ae6992e",
+      "properties": {
+        "code": "3ae6992e",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-169.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.14,
+        "building_type": "Historical religious structure / unreinforced masonry monastery"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.98448,
+          21.858356
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.b28c3a89",
+      "properties": {
+        "code": "b28c3a89",
+        "name": "Lay Htat Gyi Temple",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-170.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.95,
+        "building_type": "Historical religious structure / unreinforced masonry temple (Masonry D category)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.977297,
+          21.840298
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.a90d4448",
+      "properties": {
+        "code": "a90d4448",
+        "name": "Masoeyein Monastery, 87th St. Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-171.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 8.69,
+        "building_type": "Two-story unreinforced load-bearing brick masonry monastery building"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.069353,
+          21.967762
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.f2dce72b",
+      "properties": {
+        "code": "f2dce72b",
+        "name": "Sagaing",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-172.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 3.71,
+        "building_type": "Historical religious monument / Pagoda (unreinforced masonry stupa and tiered terraces)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.016449,
+          22.055776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.60cd2383",
+      "properties": {
+        "code": "60cd2383",
+        "name": "Royal Palace Eastern Gate, Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-173.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 12.51,
+        "building_type": "Historical masonry fortress wall with elevated timber pavilion / monumental gateway tower (pyatthat)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.105995,
+          21.99233
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.52e64a81",
+      "properties": {
+        "code": "52e64a81",
+        "name": "Tsp, Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-174.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 9.49,
+        "building_type": "Unreinforced masonry (URM) entrance arch/tower associated with a historic mosque structure (Masonry D classification)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.076577,
+          21.954767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.d06372f5",
+      "properties": {
+        "code": "d06372f5",
+        "name": "Zay Kone Monastery, Pyae Sone Street, Pyinmana",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-175.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 3.68,
+        "building_type": "Two-story unreinforced or confined brick masonry building (religious/monastery residential or communal structure)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.204927,
+          19.7480835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.126ed4e5",
+      "properties": {
+        "code": "126ed4e5",
+        "name": "Zay Kone Monastery, Pyae Sone Street, Pyinmana",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-176.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 3.69,
+        "building_type": "Religious masonry tower and multi-tiered masonry stupa / pagoda"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.2050236423273,
+          19.747813410701347
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.ef7e047c",
+      "properties": {
+        "code": "ef7e047c",
+        "name": "MyoMa Mosque in Sagaing",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-177.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.09,
+        "building_type": "Religious structure (Mosque) featuring unreinforced or poorly reinforced masonry walls, arched portals, and a minaret tower."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.984349,
+          21.876043
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.46077f8e",
+      "properties": {
+        "code": "46077f8e",
+        "name": "Presidential Palace (Naypyidaw), Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 6.7,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-179.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 6.15,
+        "building_type": "Monumental governmental/institutional structure with reinforced concrete/steel framing and high decorative finishes."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.1057,
+          19.7695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.d48e80a3",
+      "properties": {
+        "code": "d48e80a3",
+        "name": "Bagan Ancient Cultural",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-180.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 117.13,
+        "building_type": "Historical religious monuments (ancient stupas, pagodas, and temples)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.881358,
+          21.165164
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.d489af48",
+      "properties": {
+        "code": "d489af48",
+        "name": "Nan Myint Tower, Inwa, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-181.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.54,
+        "building_type": "Historical unreinforced masonry watchtower / monument (built 1821, ~30m tall)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.980721,
+          21.856136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.5788bcb6",
+      "properties": {
+        "code": "5788bcb6",
+        "name": "Sagaing city",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-183.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.09,
+        "building_type": "Utility infrastructure and electrical transmission pole structures (reinforced concrete utility poles with heavy overhead platform)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.984195,
+          21.880004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.912df902",
+      "properties": {
+        "code": "912df902",
+        "name": "Along 26th St., Mandalay, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-184.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 10.12,
+        "building_type": "Roadway infrastructure, subsurface municipal water piping, and informal roadside stalls/structures."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.0836,
+          21.9753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.ce1b117e",
+      "properties": {
+        "code": "ce1b117e",
+        "name": "Heung Min Son @heungburma; Before photo from Google Maps, Maxar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.39,
+        "intensity_flag": "0",
+        "file_name": "page-186.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 2.14,
+        "building_type": "Critical infrastructure / Air traffic control tower with adjacent terminal/support buildings."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.208118,
+          19.6262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.0d7ac7fc",
+      "properties": {
+        "code": "0d7ac7fc",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 6.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-187.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 1.95,
+        "building_type": "Modern engineered commercial / public infrastructure (Airport terminal building)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9697,
+          21.7056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.858b3da5",
+      "properties": {
+        "code": "858b3da5",
+        "name": "Thayetkon Railway Station, Pyinmana, Nay Pyi Taw",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-188.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.13,
+        "building_type": "Railway infrastructure / rail corridor (track bed, ballast, sleepers, switchgear)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.175958,
+          19.689271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.2bb1d529",
+      "properties": {
+        "code": "2bb1d529",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-189.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 384.3,
+        "building_type": "Elevated civil infrastructure / railway viaduct under construction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.979625,
+          19.498086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.2f6a4c3f",
+      "properties": {
+        "code": "2f6a4c3f",
+        "name": "Bridge called Sagaing, Ava, or Inwa Bridge Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-191.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.78,
+        "building_type": "Multi-span steel truss civil infrastructure bridge supported on masonry/concrete piers."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.993,
+          21.871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.3059f917",
+      "properties": {
+        "code": "3059f917",
+        "name": "Sagaing Bridge (The Ava Bridge)",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.43,
+        "intensity_flag": "0",
+        "file_name": "page-192.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.75,
+        "building_type": "Engineered infrastructure / Multi-span steel through-truss bridge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9926387,
+          21.8712161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.354585a5",
+      "properties": {
+        "code": "354585a5",
+        "name": "Puente Ava",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.43,
+        "intensity_flag": "0",
+        "file_name": "page-193.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.75,
+        "building_type": "Major engineered infrastructure / Steel truss bridge with masonry/concrete piers."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9926387,
+          21.8712161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.9df25df9",
+      "properties": {
+        "code": "9df25df9",
+        "name": "Sagaing Bridge (The Ava Bridge); Coordinates",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-194.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.78,
+        "building_type": "Major steel truss infrastructure bridge with masonry/concrete piers"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.993,
+          21.871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.12a6dffd",
+      "properties": {
+        "code": "12a6dffd",
+        "name": "Duthawaddy Bridge just south of Mandalay on AH1",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-195.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.38,
+        "building_type": "Engineered multi-span highway bridge (reinforced concrete/steel) and mixed residential/commercial buildings."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.990537,
+          21.831334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.21ea094a",
+      "properties": {
+        "code": "21ea094a",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.42,
+        "intensity_flag": "0",
+        "file_name": "page-196.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.38,
+        "building_type": "Multi-span vehicular girder bridge with reinforced concrete piers/bents"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.990537,
+          21.831334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.58696cce",
+      "properties": {
+        "code": "58696cce",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.39,
+        "intensity_flag": "0",
+        "file_name": "page-197.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.38,
+        "building_type": "Transportation Infrastructure / Multi-span Highway Bridge and Approach Retaining Structure"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.990537,
+          21.831334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.1c758eb5",
+      "properties": {
+        "code": "1c758eb5",
+        "name": "Screengrab from video posted by Aung San Linn @augsl1 Tiktok",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-198.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.38,
+        "building_type": "Civil infrastructure / engineered bridge approach road and bridge superstructure"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.990537,
+          21.831334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.ca20bc90",
+      "properties": {
+        "code": "ca20bc90",
+        "name": "Yangon-Mandalay Expressway Bridge crossing Myitnge River",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-199.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.28,
+        "building_type": "Engineered highway bridge infrastructure and approach embankment"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9844,
+          21.8248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.feab07a3",
+      "properties": {
+        "code": "feab07a3",
+        "name": "U- Bein Bridge, Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 6.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-200.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 6.97,
+        "building_type": "Historic timber footbridge on stilted pile bents"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.052217,
+          21.893358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.9b6cd620",
+      "properties": {
+        "code": "9b6cd620",
+        "name": "Sagaing-Mandalay (Myo Patt Road)",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-201.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 6.31,
+        "building_type": "Transportation infrastructure (paved asphalt highway and earth embankment)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.04496,
+          21.916589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.7e461ccd",
+      "properties": {
+        "code": "7e461ccd",
+        "name": "Sagaing-Mandalay (Myo Patt Road)",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-202.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 6.31,
+        "building_type": "Transportation infrastructure (paved highway) and nearby low-rise/commercial industrial roofs."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.04496,
+          21.916589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.b1931e87",
+      "properties": {
+        "code": "b1931e87",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-203.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.31,
+        "building_type": "Surrounding infrastructure includes engineered concrete road pavements, utility poles, and distant mid-rise multi-story commercial or administrative buildings."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.155165,
+          19.818859
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.a1227b30",
+      "properties": {
+        "code": "a1227b30",
+        "name": "Myittha\u2013Pyinsi Road, Myittha, Mandalay Region, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-204.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 12.72,
+        "building_type": "Transportation infrastructure (Paved asphalt road and earthen embankment)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.1264,
+          21.4174
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.339ca9b8",
+      "properties": {
+        "code": "339ca9b8",
+        "name": "Oktwin township, 132 mile marker, Yangon\u2013Mandalay Expressway, Bago Region, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-205.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 19.13,
+        "building_type": "Transportation infrastructure (Paved multi-lane highway/expressway)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.1167,
+          18.9167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.572b8059",
+      "properties": {
+        "code": "572b8059",
+        "name": "Yangon-Mandalay Highway, 163 mile, Yedashe township, Bago region, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-206.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 4.33,
+        "building_type": "Transportation Infrastructure / Multi-lane Concrete Highway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.225,
+          19.1417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.711d1a35",
+      "properties": {
+        "code": "711d1a35",
+        "name": "Facebook Khin Maung Zaw",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-207.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 5.5,
+        "building_type": "Modular pre-engineered steel truss bridge (Bailey bridge) with timber plank roadway."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.22224,
+          19.75132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.e26885da",
+      "properties": {
+        "code": "e26885da",
+        "name": "Myo Patt Road, Mandalay, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-208.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.02,
+        "building_type": "Transportation infrastructure / flexible asphalt roadway on fill and subgrade."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9833,
+          21.9333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.cd6a974f",
+      "properties": {
+        "code": "cd6a974f",
+        "name": "Naypyidaw, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-209.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 9.02,
+        "building_type": "Transportation infrastructure (multi-lane paved highway / roadway)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.0785,
+          19.7633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.d712cdca",
+      "properties": {
+        "code": "d712cdca",
+        "name": "Naypyidaw, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-210.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 9.02,
+        "building_type": "Transportation infrastructure / Paved asphalt road and median embankment"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.0785,
+          19.7633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.5e440f92",
+      "properties": {
+        "code": "5e440f92",
+        "name": "Kyaukse, Kyaukse District, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-211.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 2.26,
+        "building_type": "Civil infrastructure / Bridge approach embankment and reinforced concrete bridge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.9678,
+          21.6047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.519b7b76",
+      "properties": {
+        "code": "519b7b76",
+        "name": "Kyaukse, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.0,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-212.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 14.79,
+        "building_type": "Civil infrastructure / Highway bridge approach and roadway embankment"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.1332,
+          21.6044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.d10259ae",
+      "properties": {
+        "code": "d10259ae",
+        "name": "Yangon-Mandalay Road",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-214.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 17.92,
+        "building_type": "Transportation Infrastructure / Highway Embankment"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.865016,
+          20.876109
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.f15742f9",
+      "properties": {
+        "code": "f15742f9",
+        "name": "Thaminchan south village, northwest of Mandalay",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.49,
+        "intensity_flag": "0",
+        "file_name": "page-215.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 7.89,
+        "building_type": "Rural residential / informal structures (fencing, small outbuildings)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.0589,
+          22.026716
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.bdcce2fa",
+      "properties": {
+        "code": "bdcce2fa",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-216.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.74,
+        "building_type": "Rural residential dwellings, boundary walls, and paved/unpaved rural access infrastructure."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.993406,
+          21.849187
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.86f1f896",
+      "properties": {
+        "code": "86f1f896",
+        "name": "Demoso Township, Loikaw District, Kayah State, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.59,
+        "intensity_flag": "0",
+        "file_name": "page-217.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 98.19,
+        "building_type": "Natural terrain / unbuilt forested environment (no buildings visible)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          97.1667,
+          19.5333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.a2b7b765",
+      "properties": {
+        "code": "a2b7b765",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 8.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-218.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.14,
+        "building_type": "Single-story residential building with framed construction and infill/lightweight cladding."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.98824,
+          21.831397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.df7841ee",
+      "properties": {
+        "code": "df7841ee",
+        "name": "Source",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-219.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 13.04,
+        "building_type": "Residential enclosure with masonry boundary walls and adjacent low-rise buildings."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.1288,
+          21.4279
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.532fd286",
+      "properties": {
+        "code": "532fd286",
+        "name": "TikTok @heinwaisoe073 (left and middle panels); Heung Min Son",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.0,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-220.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.66,
+        "building_type": "Civil infrastructure / Earthen dam with concrete facing panels and riprap."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.121426,
+          20.159054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.341c65ef",
+      "properties": {
+        "code": "341c65ef",
+        "name": "May Zali Kyin Village, Tatkone Township, Nay Pyi Taw Union Territory, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-221.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 8.32,
+        "building_type": "Civil hydraulic infrastructure: earthen embankment dam, reinforced concrete/masonry diversion weir, concrete irrigation canal, and retaining wing walls."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.2,
+          20.1333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.47b5e64f",
+      "properties": {
+        "code": "47b5e64f",
+        "name": "Sin Thay Diversion Weir, May Zali Kyin Village, Tatkone Township, Nay Pyi Taw Union Territory, Myanmar",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 7.5,
+        "intensity_stddev": 0.45,
+        "intensity_flag": "0",
+        "file_name": "page-222.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 10.31,
+        "building_type": "Civil infrastructure / earthen diversion weir and embankment road"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.22,
+          20.13
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MMI.3beb3d55",
+      "properties": {
+        "code": "3beb3d55",
+        "name": "Sagaing city",
+        "network": "MMI",
+        "netid": "MMI",
+        "station_type": "macroseismic",
+        "channels": [],
+        "nresp": 1,
+        "source": "QuakeLLMmap Agentic Reconnaissance",
+        "intensity": 9.5,
+        "intensity_stddev": 0.41,
+        "intensity_flag": "0",
+        "file_name": "test_page1.pdf",
+        "model_name": "gemini-3.8-flash",
+        "rrup_km": 0.02,
+        "building_type": "Roadside commercial/residential structures and low-to-mid-rise multi-story buildings."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.98488055555556,
+          21.880352777777777
+        ]
+      }
+    }
+  ]
+}

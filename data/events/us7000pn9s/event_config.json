@@ -1,0 +1,35 @@
+{
+  "event": {
+    "id": "us7000pn9s",
+    "name": "2025 Mw 7.7 Mandalay, Myanmar",
+    "magnitude": 7.7,
+    "origin_time_utc": "2025-03-28T06:20:00Z",
+    "hypocenter": {
+      "latitude": 21.95,
+      "longitude": 96.10,
+      "depth_km": 10.0
+    }
+  },
+  "spatial_bounds": {
+    "min_lat": 13.0,
+    "max_lat": 27.0,
+    "min_lon": 91.0,
+    "max_lon": 103.0
+  },
+  "regional_context": {
+    "languages": ["my", "en"],
+    "townships": ["Mandalay", "Sagaing", "Amarapura", "Pyin Oo Lwin"],
+    "local_lexicon": ["ငလျင်", "ပြိုကျ", "အက်ကွဲ", "earthquake", "collapse", "rupture"],
+    "building_typologies": [
+      "Unreinforced brick masonry (pagodas, monasteries)",
+      "Reinforced concrete frame with brick infill",
+      "Timber and bamboo residential structures"
+    ]
+  },
+  "fault_model": {
+    "fault_name": "Sagaing Fault",
+    "trace_file": "data/myanmar/rupture.json",
+    "attenuation_curve_file": "data/myanmar/attenuation_curves.json",
+    "stationlist_file": "data/myanmar/stationlist.json"
+  }
+}
