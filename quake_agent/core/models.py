@@ -89,21 +89,26 @@ class SeismicEvaluation:
     created_at: datetime = field(default_factory=datetime.utcnow)
 
     def to_shakemap_feature(self) -> Dict[str, Any]:
-        """Convert into USGS ShakeMap v4 observation JSON format."""
+        """Convert into official USGS ShakeMap v4 observation JSON format (non-instrumented MMI)."""
         stddev = round(0.35 + (1.0 - max(0.0, min(1.0, self.confidence))) * 0.70, 2)
+        code = self.content_id[:8]
         return {
             "type": "Feature",
-            "id": f"QUAKELLM.{self.content_id[:8]}",
+            "id": f"MMI.{code}",
             "properties": {
-                "code": self.content_id[:8],
+                "code": code,
                 "name": self.location_name or "AI Eyewitness Observation",
-                "file_name": self.file_name,
-                "model_name": self.model_name,
-                "netid": "QUAKELLM",
+                "network": "MMI",
+                "netid": "MMI",
+                "station_type": "macroseismic",
+                "channels": [],
+                "nresp": 1,
                 "source": "QuakeLLMmap Agentic Reconnaissance",
                 "intensity": round(self.mmi_estimation, 1),
                 "intensity_stddev": stddev,
                 "intensity_flag": "0",
+                "file_name": self.file_name,
+                "model_name": self.model_name,
                 "rrup_km": round(self.rrup_km, 2) if self.rrup_km is not None else None,
                 "building_type": self.building_type
             },
